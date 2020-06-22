@@ -6,6 +6,9 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
 
 ## 目录(TOC)
 
+* [数据结构](#数据结构data-structure)
+    * [LSM-Tree](#lsmtree)
+        * [The Log-Structured Merge-Tree](#the-log-structured-merge-tree)
 * [分布式(Distributed Systems)](#分布式distributed-systems)
     * [一致性(Consensus)](#一致性consensus)
         * [Paxos](#paxos)
@@ -17,6 +20,26 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
         * [Bigtable: A Distributed Storage System for Structured Data](#bigtable-a-distributed-storage-system-for-structured-data)
 * [数据库(Database)](#数据库database)
     * [主存数据库(MMDB)](#主存数据库mmdb)
+
+## 数据结构(Data Structure)
+
+### LSMTree
+
+#### **[The Log-Structured Merge-Tree](https://www.cs.umb.edu/~poneil/lsmtree.pdf)**
+
+LSM-tree 在存储领域备受关注，不同于 B-Tree 实时写入带来的性能开销，LSM-tree 在将数据写入 Log（sequential log file） 及 内存之后就返回结果，将下盘操作延后并批量化，从而将每次写操作的磁盘寻道及转动的时延平均，从而提高了写性能。
+
+**论文要点**
+
+- LSM-Tree 适用于写远大于读的场景
+- LSM-Tree 由一个内存常驻的 C0 tree 及多个磁盘常驻的 Ck tree 组成
+- C0 tree 可以实现为 (2-3) tree 或 AVL tree，而 Ck tree 实现为 B-tree
+- C0 tree 在达到一定阈值之后会将一部分数据迁移到 C1 tree，同样，Ck-1 tree 在达到一定阈值之后会迁移到 Ck tree，此过程称为 onging `rolling merge` process
+- merge 过程中会用到 Multi-page block（256K bytes == 64 page）IO，从而提高吞吐
+- merge 过程中产生的新数据不覆盖旧数据
+- 为了能快速 recover，实现会不定时对 C0 tree 做 checkpoint
+
+论文分析了要达到一定 I/O B-tree 和 LSM-Tree 的成本对比，以及不同 Component 大小比例调优的过程，详细内容见原文。
 
 ## 分布式(Distributed Systems)
 
