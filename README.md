@@ -7,6 +7,9 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
 ## 目录(TOC)
 
 * [数据结构](#数据结构data-structure)
+    * [B-Tree](#btree)
+        * [Organization and Maintenance of Large Ordered Indices](#organization-and-mantenance-of-large-ordered-indices)
+        * [The Ubiquitous B-Tree](#the-ubiquitous-b-tree)
     * [LSM-Tree](#lsmtree)
         * [The Log-Structured Merge-Tree](#the-log-structured-merge-tree)
 * [分布式(Distributed Systems)](#分布式distributed-systems)
@@ -22,6 +25,26 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
     * [主存数据库(MMDB)](#主存数据库mmdb)
 
 ## 数据结构(Data Structure)
+
+### BTree
+
+#### **[Organization and Maintenance of Large Ordered Indices](https://infolab.usc.edu/csci585/Spring2010/den_ar/indexing.pdf)**
+
+B-tree 是由 Rudolf Bayer 和 Edward M. McCreight 在 1970 年发明的、适用于读取较大数据块（如 disk）的一种数据结构，广泛应用于数据库和文件系统作为索引（index）层。
+
+B-tree 可以在插入或删除的时候一直保持树的平衡，可以在 [B-Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html) 操作一下，以便有个直观的印象。
+
+#### **[The Ubiquitous B-Tree](http://carlosproal.com/ir/papers/p121-comer.pdf)**
+
+> Unfortunately, a B-tree may not do well in a sequential processing environment. While a simple preorder tree walk [KNUT68] extracts all the keys in order, it requires space for at least h = logd(n + 1) nodes in main memory since it stacks the nodes along a path from the root to avoid reading them twice.
+
+> Additionally, processing a next operation may require tracing a path through several nodes before reaching the desired key.
+
+**B+ Tree**
+
+B+ Tree 在保持树平衡的同时，其所有叶子节点（除最右）都有一个指向下一个叶子节点的指针，因此在顺序遍历下一个 key 的时候，最多只需要一次读盘，而且内存中只需要驻留一个 node。
+
+B+ Tree 叶节点除最左和最右的 key 外，所有的 key 在非叶子节点中都存在一份(唯一)作为索引，因此称非页节点中的数据为 index。B+ Tree 的插入删除操作可在 [B+ Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html) 实际操作一下。
 
 ### LSMTree
 
