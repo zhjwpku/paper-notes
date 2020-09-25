@@ -23,6 +23,8 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
         * [Bigtable: A Distributed Storage System for Structured Data](#bigtable-a-distributed-storage-system-for-structured-data)
 * [数据库(Database)](#数据库database)
     * [主存数据库(MMDB)](#主存数据库mmdb)
+* [Persistent Memory](#persistent-memory)
+    * [System Evaluation of the Intel Optane Byte-addressable NVM](#system-evaluation-of-the-intel-optane-byte-addressable-nvm)
 
 ## 数据结构(Data Structure)
 
@@ -192,6 +194,19 @@ Bigtable 中 Column Family 是我认为相对难懂一点的概念，读者可�
 ### 主存数据库(MMDB)
 
 #### **[Main Memory Database Systems: An Overview](https://15721.courses.cs.cmu.edu/spring2016/papers/garciamolina-tkde1992.pdf)**
+
+## Persistent Memory
+
+持久内存作为一种新型存储介质，弥补了内存和SSD介质之间的性能鸿沟，PMem 的不易失（相对DRAM），容量大（相对DRAM），时延小（相对SSD）等特性。
+
+#### **[System Evaluation of the Intel Optane Byte-addressable NVM](https://arxiv.org/pdf/1908.06503.pdf)**
+
+持久内存具有高密度、低功耗、成本低（per bit）的特性，同时也存在一些劣势: 3~20 倍于 DRAM 的访问时延、低带宽、读写性能不对称。作者对 DRAM 和 PMem 在不同配置下的时延、带宽、耗电等特性进行了测试和分析，其结论对持久内存编程的性能分析及优化具有一定启发。
+
+- Using DRAM as a cache to NVM can effectively bridge the performace gap and brings performace close to DRAM
+- Coordinating 256B accesses to PMM to to exploit locality may reduce latency and write-amplification
+- Explicit data placement that utilizes local PMM could mitigate high cost of accessing DRAM on the remote socket
+
 
 [baye77]: https://dl.acm.org/doi/pdf/10.1145/320521.320530
 
