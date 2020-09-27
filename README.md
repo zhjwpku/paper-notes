@@ -25,6 +25,7 @@ This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegeg
     * [主存数据库(MMDB)](#主存数据库mmdb)
 * [Persistent Memory](#persistent-memory)
     * [System Evaluation of the Intel Optane Byte-addressable NVM](#system-evaluation-of-the-intel-optane-byte-addressable-nvm)
+    * [An Empirical Guide to the Behavior and Use of Scalable Persistent Memory (FAST ’20)](#an-empirical-guide-to-the-behavior-and-use-of-scalable-persistent-memory)
 
 ## 数据结构(Data Structure)
 
@@ -207,6 +208,14 @@ Bigtable 中 Column Family 是我认为相对难懂一点的概念，读者可�
 - Coordinating 256B accesses to PMM to to exploit locality may reduce latency and write-amplification
 - Explicit data placement that utilizes local PMM could mitigate high cost of accessing DRAM on the remote socket
 
+#### **[An Empirical Guide to the Behavior and Use of Scalable Persistent Memory](https://www.usenix.org/system/files/fast20-yang.pdf)**
+
+在 Optane DC Persistent Memory 出现之前，很多学者使用仿真的方式研究 NVM，本文通过对 Optane DIMM 的实验对先前的经验进行了分析修正，并给出了使用 Optane DIMM 的四个原则:
+
+1. 避免小于 256 B 的随机读写
+2. 尽可能使用 ntstore（non-temporal stores）进行大数据的写，并控制 Cache 的淘汰
+3. 限制访问 Optane DIMM 的并发线程数
+4. 避免NUMA访问（尤其是read-modify-write 操作序列）
 
 [baye77]: https://dl.acm.org/doi/pdf/10.1145/320521.320530
 
