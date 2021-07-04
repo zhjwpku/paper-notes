@@ -1,0 +1,6 @@
+[book]
+authors = ["元组"]
+language = "en"
+multilingual = false
+src = "src"
+title = "论文阅读笔记"
