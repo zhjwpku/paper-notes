@@ -22,7 +22,7 @@ Ceph 也不例外，在其架构演进的进程中前后使用过 Btrfs，XFS �
 2. implementing a WAL in user space
 3. using a key-value database with transactions as a WAL
 
-Ceph 在尝试上述三种方式时都遇到了一些问题，如使用文件系统内置的事务机制会造成数据部分提交；在用户态实现 WAL 或使用 KV数据库作为 WAL 都会遇到大量 Read-Modify-Write、操作非幂等引起进程重启后数据不一致、数据双写等问题。
+Ceph 在尝试上述三种方式时都遇到了一些问题，如使用文件系统内置的事务机制会造成数据部分提交；在用户态实现 WAL 有 Read-Modify-Write、操作非幂等引起进程重启后数据不一致、数据双写等问题；使用 KV数据库作为 WAL 的 NewStore 解决了用户态 WAL 的问题，但由于每个事务需要先写数据再写元数据，分别对应一次 fsync，而对于 fsync，文件系统的行为是先 flush 数据再 flush 元数据，这就造成了在 NewStore 中写一个对象导致了四次昂贵的刷盘操作，典型的 **journaling of journal** 问题。
 
 第二，元数据的性能低效会扩散到整个集群。Ceph 团队遇到的一个挑战是 Posix 文件系统的 readdir 操作返回结果是乱序的，为了保证排序的高效，需要对目录进行分裂，这就会影响全局性能。
 
