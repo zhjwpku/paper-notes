@@ -27,16 +27,20 @@ PolarFS 由存储层(Storage layer)和文件系统层(File system layer)构成�
 
 #### 文件系统层
 
+文件系统元数据的管理，其负责在该逻辑存储空间上实现文件管理，并负责文件并发访问的同步和互斥。
+
 - 提供一个共享、并发的文件系统，可以被多个数据库实例访问
 - libfs 完全实现在用户态，提供一组 Posix-like 文件系统接口，如 pfs_mount 将应用程序附加到相应的 Volumn 上，并初始化文件系统状态；pfs_mount_growfs 可以将 Volumn 扩展的空间标识为文件系统可用
 - 元数据的管理分为两部分
   - organize metadata to access and update files and directories within a database node
   - coordinate and synchronize metadata modification among database nodes
 - 元数据的更改记录在 jounal 中，RO 实例通过轮询日志 anchor 的变动来将日志 replay 到本节点的元数据
-- 当网络分区发生的时候，有可能有多个实例写 journal，因此需要 disk paxos 算法来协调写日志
+- 当网络分区发生的时候，有可能有多个实例写 journal，因此需要 disk paxos 算法来保证对 Journal 文件的互斥写
 
 
 #### 存储层
+
+存储资源的虚拟化管理，其负责为每个数据库实例提供一个逻辑存储空间。
 
 **ChunkServer**
 
@@ -71,6 +75,7 @@ PolarFS 由存储层(Storage layer)和文件系统层(File system layer)构成�
 - 创建 Volumn 并将 Chunks 分配给 ChunkServer
 - 将元数据同步到 PolarSwitch，推和拉两种方式都有
 - 监控 Volumn 和 Chunk 的 I/O 时延和吞吐
+- 周期性地发起副本内和副本间的CRC数据校验
 
 #### I/O 执行模型
 
@@ -96,3 +101,9 @@ PolarFS 由存储层(Storage layer)和文件系统层(File system layer)构成�
 ### ParallelRaft
 
 这部分只是简单浏览了一下，以后有机会再详细拜读。
+
+
+
+#### References:
+
+[1] [PolarFS：面向云数据库的超低延迟文件系统（发表于VLDB 2018）](https://topic.atatech.org/articles/107314) by 鸣嵩
