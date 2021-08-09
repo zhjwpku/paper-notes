@@ -2,7 +2,7 @@
 
 This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegege/papers-notebook).
 
-记录阅读论文时的收获。
+I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally.
 
 ## 目录(TOC)
 
