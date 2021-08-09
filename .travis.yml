@@ -25,5 +25,5 @@ deploy:
   local-dir: book # In case of custom book path: path/to/mybook/book
   keep-history: false
   on:
-    branch: main
+    branch: master
   target_branch: gh-pages
