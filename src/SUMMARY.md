@@ -1,6 +1,8 @@
 # Summary
 
 [Paper Notes](./README.md)
+- [datalayout](./datalayout/README.md)
+  - [cstore](./datalayout/c-store.md)
 - [filesystem](./filesystem/README.md)
   - [polarfs](./filesystem/polarfs.md)
 - [storage](./storage/README.md)
