@@ -224,3 +224,7 @@ Dremel 是一个多用户系统，其 query dispatcher 会根据任务优先级�
 Paper 中没有提到索引、连接、数据更新相关的内容。
 
 [Apache Parquet](https://github.com/apache/parquet-format) 的实现参考了 Dremel 的数据模型，[Apache Drill](https://github.com/apache/drill) 的实现参考了 Dremel 的查询模型。
+
+#### References:
+
+[1] [Dremel made simple with Parquet](https://blog.twitter.com/engineering/en_us/a/2013/dremel-made-simple-with-parquet)
