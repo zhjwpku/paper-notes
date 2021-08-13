@@ -3,6 +3,7 @@
 [Paper Notes](./README.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
+  - [dremel](./datalayout/dremel.md)
 - [filesystem](./fs/README.md)
   - [polarfs](./fs/polarfs.md)
 - [storage](./storage/README.md)
