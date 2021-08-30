@@ -5,6 +5,7 @@
   - [cstore](./datalayout/c-store.md)
   - [dremel](./datalayout/dremel.md)
   - [rcfile](./datalayout/rcfile.md)
+  - [orc](./datalayout/orc.md)
 - [filesystem](./fs/README.md)
   - [polarfs](./fs/polarfs.md)
 - [storage](./storage/README.md)
