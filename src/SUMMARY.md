@@ -1,6 +1,10 @@
 # Summary
 
 [Paper Notes](./README.md)
+- [databases](./databases/README.md)
+  - [column-stores-vs-row-stores](./databases/column-stores-vs-row-stores.md)
+  - [kv](./databases/kv/README.md)
+    - [dynamo](./databases/kv/dynamo.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
   - [dremel](./datalayout/dremel.md)

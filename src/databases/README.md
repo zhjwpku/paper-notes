@@ -1,7 +1,8 @@
 ## databases
 
-### KV
+- **[Column-stores vs. row-stores: how different are they really?][column-stores-vs-row-stores]**
+- **[KV databases](kv/index.html)**
+  - **[Dynamo: Amazon’s Highly Available Key-value Store][dynamo]**
 
-- **[Dynamo: Amazon’s Highly Available Key-value Store][dynamo]**
-
-[dynamo]: dynamo.md
+[column-stores-vs-row-stores]: colum-stores-vs-row-stores.md
+[dynamo]: kv/dynamo.md
