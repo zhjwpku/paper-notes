@@ -3,6 +3,8 @@
 [Paper Notes](./README.md)
 - [databases](./databases/README.md)
   - [column-stores-vs-row-stores](./databases/column-stores-vs-row-stores.md)
+  - [mmdb](./databases/mmdb/README.md)
+    - [mmdb-overview](./databases/mmdb/overview.md)
   - [kv](./databases/kv/README.md)
     - [dynamo](./databases/kv/dynamo.md)
 - [datalayout](./datalayout/README.md)
