@@ -7,6 +7,8 @@
     - [mmdb-overview](./databases/mmdb/overview.md)
   - [kv](./databases/kv/README.md)
     - [dynamo](./databases/kv/dynamo.md)
+  - [olap](./databases/olap/README.md)
+    - [lakehouse](./databases/olap/lakehouse.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
   - [dremel](./datalayout/dremel.md)
