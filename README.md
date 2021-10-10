@@ -1,31 +1,36 @@
 # 论文笔记
 
+[![Build Status](https://app.travis-ci.com/zhjwpku/paper-notes.svg?branch=master)](https://app.travis-ci.com/zhjwpku/paper-notes)
+
 This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegege/papers-notebook).
 
 I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally.
 
 ## 目录(TOC)
 
-* [数据结构](#数据结构data-structure)
-    * [B-Tree](#btree)
-        * [Organization and Maintenance of Large Ordered Indices](#organization-and-mantenance-of-large-ordered-indices)
-        * [The Ubiquitous B-Tree](#the-ubiquitous-b-tree)
-    * [LSM-Tree](#lsmtree)
-        * [The Log-Structured Merge-Tree](#the-log-structured-merge-tree)
-* [分布式(Distributed Systems)](#分布式distributed-systems)
-    * [一致性(Consensus)](#一致性consensus)
-        * [Paxos](#paxos)
-        * [Raft](#raft)
-    * [分布式跟踪(Tracing)](#tracing)
-        * [Dapper](#dapper)
-    * [存储(Storage)](#存储storage)
-        * [The Google File System](#the-google-file-system)
-        * [Bigtable: A Distributed Storage System for Structured Data](#bigtable-a-distributed-storage-system-for-structured-data)
-* [数据库(Database)](#数据库database)
-    * [主存数据库(MMDB)](#主存数据库mmdb)
-* [Persistent Memory](#persistent-memory)
-    * [System Evaluation of the Intel Optane Byte-addressable NVM](#system-evaluation-of-the-intel-optane-byte-addressable-nvm)
-    * [An Empirical Guide to the Behavior and Use of Scalable Persistent Memory (FAST ’20)](#an-empirical-guide-to-the-behavior-and-use-of-scalable-persistent-memory)
+- [论文笔记](#论文笔记)
+  - [目录(TOC)](#目录toc)
+  - [数据结构(Data Structure)](#数据结构data-structure)
+    - [BTree](#btree)
+      - [**Organization and Maintenance of Large Ordered Indices**](#organization-and-maintenance-of-large-ordered-indices)
+      - [**The Ubiquitous B-Tree**](#the-ubiquitous-b-tree)
+    - [LSMTree](#lsmtree)
+      - [**The Log-Structured Merge-Tree**](#the-log-structured-merge-tree)
+  - [分布式(Distributed Systems)](#分布式distributed-systems)
+    - [一致性(Consensus)](#一致性consensus)
+      - [**Paxos)**](#paxos)
+      - [Raft](#raft)
+    - [Tracing](#tracing)
+      - [Dapper](#dapper)
+    - [存储(Storage)](#存储storage)
+      - [**The Google File System**](#the-google-file-system)
+      - [**Bigtable: A Distributed Storage System for Structured Data**](#bigtable-a-distributed-storage-system-for-structured-data)
+  - [数据库(Database)](#数据库database)
+    - [主存数据库(MMDB)](#主存数据库mmdb)
+      - [**Main Memory Database Systems: An Overview**](#main-memory-database-systems-an-overview)
+  - [Persistent Memory](#persistent-memory)
+      - [**System Evaluation of the Intel Optane Byte-addressable NVM**](#system-evaluation-of-the-intel-optane-byte-addressable-nvm)
+      - [**An Empirical Guide to the Behavior and Use of Scalable Persistent Memory**](#an-empirical-guide-to-the-behavior-and-use-of-scalable-persistent-memory)
 
 ## 数据结构(Data Structure)
 
