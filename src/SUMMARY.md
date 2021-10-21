@@ -9,6 +9,8 @@
     - [dynamo](./databases/kv/dynamo.md)
   - [olap](./databases/olap/README.md)
     - [lakehouse](./databases/olap/lakehouse.md)
+  - [cdc](./databases/cdc/README.md)
+    - [dblog](./databases/cdc/dblog.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
   - [dremel](./datalayout/dremel.md)
