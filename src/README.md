@@ -1,8 +1,6 @@
 ## Paper Notes
 
-阿里云数据库产品部要求每两周深读一篇领域相关的论文。
-
-我是阿里云的元组，本仓库记录我读过的 paper 以及对每篇 paper 的理解、收货和疑问。
+本仓库记录我读过的 paper 以及对每篇 paper 的理解、收货和疑问。
 
 如何读论文我参考了 [How to Read a Paper](./assets/pdfs/how-to-read-a-paper.pdf) 的 three-pass method:
 
