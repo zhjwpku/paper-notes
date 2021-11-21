@@ -5,5 +5,9 @@ multilingual = false
 src = "src"
 title = "论文阅读笔记"
 
+[output.html]
+git-repository-url = "https://github.com/zhjwpku/paper-notes"
+edit-url-template = "https://github.com/zhjwpku/paper-notes/edit/master/{path}"
+
 [output.html.fold]
 enable = false
