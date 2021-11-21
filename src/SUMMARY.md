@@ -18,6 +18,8 @@
   - [orc](./datalayout/orc.md)
 - [filesystem](./fs/README.md)
   - [polarfs](./fs/polarfs.md)
+- [scheduler](./scheduler/README.md)
+  - [nephele](./scheduler/nephele.md)
 - [storage](./storage/README.md)
   - [kudu](./storage/kudu.md)
   - [bluestore](./storage/bluestore.md)
