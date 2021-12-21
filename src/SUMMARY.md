@@ -18,6 +18,7 @@
   - [orc](./datalayout/orc.md)
 - [distributed system](./distributedsystem/README.md)
   - [holy grail](./distributedsystem/holygrail.md)
+  - [chandy lamport](./distributedsystem/chandy.md)
 - [filesystem](./fs/README.md)
   - [polarfs](./fs/polarfs.md)
 - [scheduler](./scheduler/README.md)
