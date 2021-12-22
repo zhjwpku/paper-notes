@@ -19,6 +19,7 @@
 - [distributed system](./distributedsystem/README.md)
   - [holy grail](./distributedsystem/holygrail.md)
   - [chandy lamport](./distributedsystem/chandy.md)
+  - [asynchronous barrier snapshotting](./distributedsystem/abs.md)
 - [filesystem](./fs/README.md)
   - [polarfs](./fs/polarfs.md)
 - [scheduler](./scheduler/README.md)
