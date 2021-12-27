@@ -1,6 +1,8 @@
 # Summary
 
 [Paper Notes](./README.md)
+- [bigdata](./bigdata/README.md)
+  - [dataflow model](./bigdata/dataflow-model.md)
 - [databases](./databases/README.md)
   - [column-stores-vs-row-stores](./databases/column-stores-vs-row-stores.md)
   - [mmdb](./databases/mmdb/README.md)
