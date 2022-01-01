@@ -3,6 +3,8 @@
 [Paper Notes](./README.md)
 - [bigdata](./bigdata/README.md)
   - [dataflow model](./bigdata/dataflow-model.md)
+- [consensus](./consensus/README.md)
+  - [paxos made simple](./consensus/paxos-made-simple.md)
 - [databases](./databases/README.md)
   - [column-stores-vs-row-stores](./databases/column-stores-vs-row-stores.md)
   - [mmdb](./databases/mmdb/README.md)
