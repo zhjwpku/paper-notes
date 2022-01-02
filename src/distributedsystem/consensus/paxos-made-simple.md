@@ -24,12 +24,12 @@ Paxos 分布式共识算法是一个系列，Paxos Made Simple 是对其基本�
 
 Paxos 算法中一些要点:
 
-- Acceptor 需要持久存储记录自己的状态
+- Acceptor 需要持久存储记录 minProposal、acceptedProposal、acceptedValue 等状态
 - Paxos 算法的三个里程碑（详细介绍参考 [3]）
   - When the proposer receives promise(n) messages from a majority of acceptors.
   - When a majority of acceptors all issue accepted(n,val) messages for proposal number n and some value val.
   - When the proposer(s) and learners receive accepted(n,val) messages from a majority of the acceptors.
-- 如果需要对一系列值进行决策，需要多次运行 Paxos 算法，这称为 Multi-Paxos。
+- 如果需要对一系列值进行决策，需要多次运行 Paxos 算法，这称为 Multi-Paxos，Multi-Paxos 在学术界没有明确的阐述，在实现上需要解决很多问题，[4] 中有相应介绍
 
 
 #### References:
