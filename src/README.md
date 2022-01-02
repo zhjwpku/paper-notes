@@ -14,3 +14,10 @@
    - 仔细阅读论文中的插图、图表或其它插画，尤其注意那些横纵坐标的含义
    - 标记下自己没有阅读过的相关引用
 3. 为了完全理解一篇论文，往往需要阅读第三遍。第三遍则需要读者从作者的角度出发，试着在脑子里重新实现一遍论文的工作（初学者需要多个小时，对于有经验的读者也需要1-2个小时）
+
+论文方向: CS/Database/Distributed System
+
+论文来源:
+- [The Morning Paper](https://blog.acolyer.org/)
+- [Literature references for “Designing Data-Intensive Applications”](https://github.com/ept/ddia-references)
+- 一些 [CS 课程](https://zhjwpku.com/2018/09/16/awesome-cs-courses.html) 中的推荐阅读
