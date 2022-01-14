@@ -1,4 +1,4 @@
-## [The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in MassiveScale, Unbounded, OutofOrder Data Processing](../pdfs/../../assets/pdfs/the_dataflow_model.pdf)
+### [The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in MassiveScale, Unbounded, OutofOrder Data Processing](../pdfs/../../assets/pdfs/the_dataflow_model.pdf)
 
 > Proceedings of the VLDB EndowmentVolume 8Issue 12August 2015 pp 1792–1803
 >
