@@ -2,6 +2,7 @@
 
 [Paper Notes](./README.md)
 - [bigdata](./bigdata/README.md)
+  - [mapreduce](./bigdata/mapreduce.md)
   - [dataflow model](./bigdata/dataflow-model.md)
 - [databases](./databases/README.md)
   - [column-stores-vs-row-stores](./databases/column-stores-vs-row-stores.md)
