@@ -18,6 +18,9 @@
 论文方向: CS/Database/Distributed System
 
 论文来源:
+
+- [Readings in Database Systems, 5th Edition](http://www.redbook.io/)
 - [The Morning Paper](https://blog.acolyer.org/)
 - [Literature references for “Designing Data-Intensive Applications”](https://github.com/ept/ddia-references)
 - 一些 [CS 课程](https://zhjwpku.com/2018/09/16/awesome-cs-courses.html) 中的推荐阅读
+- [papers-we-love](https://github.com/papers-we-love/papers-we-love)
