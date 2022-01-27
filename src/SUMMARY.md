@@ -13,6 +13,7 @@
     - [mmdb overview](./databases/mmdb/overview.md)
   - [olap](./databases/olap/README.md)
     - [lakehouse](./databases/olap/lakehouse.md)
+    - [delta lake](./databases/olap/delta-lake.md)
   - [cdc](./databases/cdc/README.md)
     - [dblog](./databases/cdc/dblog.md)
 - [datalayout](./datalayout/README.md)
