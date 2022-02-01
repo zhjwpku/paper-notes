@@ -16,6 +16,7 @@
     - [delta lake](./databases/olap/delta-lake.md)
   - [cdc](./databases/cdc/README.md)
     - [dblog](./databases/cdc/dblog.md)
+  - [rum conjecture](./databases/rum.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
   - [dremel](./datalayout/dremel.md)
