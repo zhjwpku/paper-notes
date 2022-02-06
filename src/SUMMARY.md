@@ -29,6 +29,7 @@
   - [chandy lamport](./distributedsystem/chandy.md)
   - [asynchronous barrier snapshotting](./distributedsystem/abs.md)
 - [filesystem](./fs/README.md)
+  - [gfs](./fs/gfs.md)
   - [polarfs](./fs/polarfs.md)
 - [storage](./storage/README.md)
   - [kv store](./storage/kv/README.md)
