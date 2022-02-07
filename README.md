@@ -17,9 +17,6 @@ I have changed this repo to a mdBook, run `mdbook serve` to read the notes local
     - [LSMTree](#lsmtree)
       - [**The Log-Structured Merge-Tree**](#the-log-structured-merge-tree)
   - [分布式(Distributed Systems)](#分布式distributed-systems)
-    - [一致性(Consensus)](#一致性consensus)
-      - [**Paxos)**](#paxos)
-      - [Raft](#raft)
     - [Tracing](#tracing)
       - [Dapper](#dapper)
     - [存储(Storage)](#存储storage)
@@ -90,20 +87,6 @@ LSM-tree 在存储领域备受关注，不同于 B-Tree 实时写入带来的性
 论文分析了要达到一定 I/O B-tree 和 LSM-Tree 的成本对比，以及不同 Component 大小比例调优的过程，详细内容见原文。
 
 ## 分布式(Distributed Systems)
-
-### 一致性(Consensus)
-
-一说 Consensus 翻译成`共识`更恰当，以区分 consistency。
-
-一致性是一组参与者就一个结果达成一致的过程，当参与者或它们之前的通信媒介可能经历失败时，这个问题变得困难。常见的分布式一致性协议有 Paxos、Raft。
-
-#### **[Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science))**
-
-*There is only one consensus protocol, and that’s Paxos-all other approaches are just broken versions of Paxos. -- Mike Burrows(Google)*
-
-Paxos 是在不可靠的处理器网络中解决一致性的一系列协议。
-
-#### Raft
 
 ### Tracing
 
