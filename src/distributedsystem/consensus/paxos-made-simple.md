@@ -37,4 +37,4 @@ Paxos 算法中一些要点:
 [1] [The Paxos Algorithm](https://www.youtube.com/watch?v=d7nAGI_NZPk), A Google TechTalk presented by Luis Quesada Torres (Feb 2, 2018)<br>
 [2] [Paxos made simple](https://blog.acolyer.org/2015/03/04/paxos-made-simple/) by Adrian Colyer<br>
 [3] [Distributed Systems Lecture 15](https://www.youtube.com/watch?v=UCmAzWvrFmo) by Lindsey Kuper<br>
-[4] [Paxos lecture (Raft user study)](https://www.youtube.com/watch?v=JEpsBg0AO6o) by Diego Ongaro
+[4] [Paxos lecture (Raft user study)](https://www.youtube.com/watch?v=JEpsBg0AO6o) by John Ousterhout
