@@ -30,6 +30,7 @@
   - [holy grail](./distributedsystem/holygrail.md)
   - [chandy lamport](./distributedsystem/chandy.md)
   - [asynchronous barrier snapshotting](./distributedsystem/abs.md)
+  - [zookeeper](./distributedsystem/zookeeper.md)
 - [filesystem](./fs/README.md)
   - [gfs](./fs/gfs.md)
   - [polarfs](./fs/polarfs.md)
