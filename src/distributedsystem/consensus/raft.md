@@ -118,4 +118,5 @@ Raft 使用 `joint consensus` 算法来保证配置切换期间不会出现双 `
 [2] [Raft lecture (Raft user study)](https://www.youtube.com/watch?v=YbZ3zDzDnrw) by by John Ousterhout<br>
 [3] [Designing for Understandability: The Raft Consensus Algorithm](https://www.youtube.com/watch?v=vYp4LYbnnW8) by John Ousterhout<br>
 [4] [In Search of an Understandable Consensus Algorithm (Extended Version)](../../assets/pdfs/raft-extended-version.pdf)<br>
-[5] [Diego Ongaro's Ph.D. dissertation](https://github.com/ongardie/dissertation#readme)
+[5] [Diego Ongaro's Ph.D. dissertation](https://github.com/ongardie/dissertation#readme)<br>
+[6] [Students' Guide to Raft](https://thesquareplanet.com/blog/students-guide-to-raft/)
