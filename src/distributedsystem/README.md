@@ -1,5 +1,13 @@
 ## distributed system
 
+在 [A Brief Introduction to Distributed Systems](../assets/pdfs/A%20brief%20introduction%20to%20distributed%20systems.pdf) 的介绍中，分布式系统被定义为:
+
+> A distributed system is a **collection of autonomous computing elements** that appears to its users as a **single coherent system**.
+
+图灵奖获得者 Leslie Lamport 将分布式系统描述为:
+
+> one in which the failure of a computer you did not even know existed can render your own computer unusable.
+
 - **[consensus](./consensus/index.html)**
   - **[Paxos Made Simple][paxos-simple]**
 - **[Detecting Causal Relationships in Distributed Computations: In Search of the Holy Grail][holygrail]**
