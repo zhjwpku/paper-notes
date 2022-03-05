@@ -28,6 +28,7 @@
   - [consensus](./distributedsystem/consensus/README.md)
     - [paxos made simple](./distributedsystem/consensus/paxos-made-simple.md)
     - [raft](./distributedsystem/consensus/raft.md)
+  - [primary backup](./distributedsystem/primary-backup.md)
   - [holy grail](./distributedsystem/holygrail.md)
   - [chandy lamport](./distributedsystem/chandy.md)
   - [asynchronous barrier snapshotting](./distributedsystem/abs.md)
