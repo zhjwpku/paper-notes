@@ -26,6 +26,7 @@
   - [orc](./datalayout/orc.md)
 - [distributed system](./distributedsystem/README.md)
   - [consensus](./distributedsystem/consensus/README.md)
+    - [flp](./distributedsystem/consensus/flp.md)
     - [paxos made simple](./distributedsystem/consensus/paxos-made-simple.md)
     - [raft](./distributedsystem/consensus/raft.md)
   - [primary backup](./distributedsystem/primary-backup.md)
