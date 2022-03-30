@@ -10,8 +10,15 @@
 
 - **[Impossibility of Distributed Consensus with One Faulty Process][flp]**
 - **[Paxos Made Simple][paxos-simple]**
+- **[Paxos Made Live][paxos-live]**
 - **[In Search of an Understandable Consensus Algorithm][raft]**
 
+#### References
+
+[1] [Can’t we all just agree?](https://blog.acolyer.org/2015/03/01/cant-we-all-just-agree/)
+
+
 [paxos-simple]: paxos-made-simple.md
+[paxos-live]: paxos-made-live.md
 [raft]: raft.md
 [flp]: flp.md
