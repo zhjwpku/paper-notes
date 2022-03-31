@@ -24,6 +24,8 @@
   - [dremel](./datalayout/dremel.md)
   - [rcfile](./datalayout/rcfile.md)
   - [orc](./datalayout/orc.md)
+- [data structures](./datastructure/README.md)
+  - [skip list](./datastructure/skiplist.md)
 - [distributed system](./distributedsystem/README.md)
   - [consensus](./distributedsystem/consensus/README.md)
     - [flp](./distributedsystem/consensus/flp.md)
