@@ -62,4 +62,4 @@ Paxos 存在多个 replica 同时认为自己为 Coordinator 的情形，这种�
 > The new coordinator chooses the value from the most recent coordinator. If none of the
 > promise messages contain a value, the coordinator is free to choose a submitted value.
 
-这块的描述不是很详尽，但看过 [zab](./zab.md) 和 [raft](./raft.md) 的读者应该能联想到 zab 的 `Synchronization` 和 raft 的 `Election restriction`。
+这块的描述不是很详尽，但看过 [zab](./zab.md) 和 [raft](./raft.md) 的读者应该能联想到 zab 的 `Discovery Step l.1.2` 和 raft 的 `Election restriction`。
