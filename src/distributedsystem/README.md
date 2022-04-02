@@ -9,7 +9,11 @@
 > one in which the failure of a computer you did not even know existed can render your own computer unusable.
 
 - **[consensus](./consensus/index.html)**
+  - **[Impossibility of Distributed Consensus with One Faulty Process][flp]**
   - **[Paxos Made Simple][paxos-simple]**
+  - **[Paxos Made Live][paxos-live]**
+  - **[Zab: High-performance broadcast for primary-backup systems][zab]**
+  - **[In Search of an Understandable Consensus Algorithm][raft]**
 - **[A principle for resilient sharing of distributed resources][primary-backup]**
 - **[Chain Replication for Supporting High Throughput and Availability][chain-replication]**
 - **[Detecting Causal Relationships in Distributed Computations: In Search of the Holy Grail][holygrail]**
@@ -22,5 +26,9 @@
 [holygrail]: holygrail.md
 [chandy]: chandy.md
 [abs]: abs.md
-[paxos-simple]: consensus/paxos-made-simple.md
 [zookeeper]: zookeeper.md
+[flp]: consensus/flp.md
+[paxos-simple]: consensus/paxos-made-simple.md
+[paxos-live]: consensus/paxos-made-live.md
+[zab]: consensus/zab.md
+[raft]: consensus/raft.md
