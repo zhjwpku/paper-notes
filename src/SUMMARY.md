@@ -33,6 +33,7 @@
     - [flp](./distributedsystem/consensus/flp.md)
     - [paxos made simple](./distributedsystem/consensus/paxos-made-simple.md)
     - [paxos made live](./distributedsystem/consensus/paxos-made-live.md)
+    - [viewstamped replication](./distributedsystem/consensus/vr.md)
     - [zab](./distributedsystem/consensus/zab.md)
     - [raft](./distributedsystem/consensus/raft.md)
   - [primary backup](./distributedsystem/primary-backup.md)

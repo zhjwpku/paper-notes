@@ -12,6 +12,7 @@
   - **[Impossibility of Distributed Consensus with One Faulty Process][flp]**
   - **[Paxos Made Simple][paxos-simple]**
   - **[Paxos Made Live][paxos-live]**
+  - **[Viewstamped Replication][vr]**
   - **[Zab: High-performance broadcast for primary-backup systems][zab]**
   - **[In Search of an Understandable Consensus Algorithm][raft]**
 - **[A principle for resilient sharing of distributed resources][primary-backup]**
@@ -32,3 +33,4 @@
 [paxos-live]: consensus/paxos-made-live.md
 [zab]: consensus/zab.md
 [raft]: consensus/raft.md
+[vr]: consensus/vr.md
