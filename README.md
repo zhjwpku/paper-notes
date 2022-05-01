@@ -2,8 +2,6 @@
 
 [![Build Status](https://app.travis-ci.com/zhjwpku/paper-notes.svg?branch=master)](https://app.travis-ci.com/zhjwpku/paper-notes)
 
-This repo is inspired by [gaocegege/papers-notebook](https://github.com/gaocegege/papers-notebook).
-
 I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally.
 
 ## 目录(TOC)
@@ -17,13 +15,8 @@ I have changed this repo to a mdBook, run `mdbook serve` to read the notes local
     - [LSMTree](#lsmtree)
       - [**The Log-Structured Merge-Tree**](#the-log-structured-merge-tree)
   - [分布式(Distributed Systems)](#分布式distributed-systems)
-    - [Tracing](#tracing)
-      - [Dapper](#dapper)
     - [存储(Storage)](#存储storage)
       - [**Bigtable: A Distributed Storage System for Structured Data**](#bigtable-a-distributed-storage-system-for-structured-data)
-  - [数据库(Database)](#数据库database)
-    - [主存数据库(MMDB)](#主存数据库mmdb)
-      - [**Main Memory Database Systems: An Overview**](#main-memory-database-systems-an-overview)
   - [Persistent Memory](#persistent-memory)
       - [**System Evaluation of the Intel Optane Byte-addressable NVM**](#system-evaluation-of-the-intel-optane-byte-addressable-nvm)
       - [**An Empirical Guide to the Behavior and Use of Scalable Persistent Memory**](#an-empirical-guide-to-the-behavior-and-use-of-scalable-persistent-memory)
@@ -88,10 +81,6 @@ LSM-tree 在存储领域备受关注，不同于 B-Tree 实时写入带来的性
 
 ## 分布式(Distributed Systems)
 
-### Tracing
-
-#### Dapper
-
 ### 存储(Storage)
 
 #### **[Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)**
@@ -142,12 +131,6 @@ Bigtable 中 Column Family 是我认为相对难懂一点的概念，读者可�
 1. [Apache HBase - Just the Basics](https://www.youtube.com/watch?v=2Ci_QxJ1kiE)
 2. [HBase Tutorial For Beginners](https://www.youtube.com/watch?v=V1fXSCASVDc)
 3. [Introductio to HBase Command Line](https://www.youtube.com/watch?v=_T9-Hmp1mEY)
-
-## 数据库(Database)
-
-### 主存数据库(MMDB)
-
-#### **[Main Memory Database Systems: An Overview](https://15721.courses.cs.cmu.edu/spring2016/papers/garciamolina-tkde1992.pdf)**
 
 ## Persistent Memory
 
