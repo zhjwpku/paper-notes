@@ -50,6 +50,8 @@ Zab 协议的流程图示:
 
 ![Zab protocol summary](../../assets/images/zab_protocol_summary.jpg)
 
+[ZooKeeper’s Atomic Broadcast Protocol: Theory and practice](../../assets/pdfs/zab_theory_and_practice.pdf) 对 zab 原理及 Zookeeper 中 zab 的实现作了进一步介绍。
+
 #### References
 
 [1] [Zab: High-performance broadcast for primary-backup systems](https://blog.acolyer.org/2015/03/09/zab-high-performance-broadcast-for-primary-backup-systems/) by Adrian Colyer
