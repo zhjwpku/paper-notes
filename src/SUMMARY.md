@@ -35,6 +35,7 @@
     - [paxos made live](./distributedsystem/consensus/paxos-made-live.md)
     - [viewstamped replication](./distributedsystem/consensus/vr.md)
     - [zab](./distributedsystem/consensus/zab.md)
+    - [paxos vs. vr vs. zab](./distributedsystem/consensus/paxos-vs-vr-vs-zab.md)
     - [raft](./distributedsystem/consensus/raft.md)
   - [primary backup](./distributedsystem/primary-backup.md)
   - [chain replication](./distributedsystem/chain-replication.md)

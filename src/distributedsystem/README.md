@@ -14,6 +14,7 @@
   - **[Paxos Made Live][paxos-live]**
   - **[Viewstamped Replication][vr]**
   - **[Zab: High-performance broadcast for primary-backup systems][zab]**
+  - **[Vive La Difference: Paxos vs. Viewstamped Replication vs. Zab][vivala]**
   - **[In Search of an Understandable Consensus Algorithm][raft]**
 - **[A principle for resilient sharing of distributed resources][primary-backup]**
 - **[Chain Replication for Supporting High Throughput and Availability][chain-replication]**
@@ -34,3 +35,4 @@
 [zab]: consensus/zab.md
 [raft]: consensus/raft.md
 [vr]: consensus/vr.md
+[vivala]: consensus/paxos-vs-vr-vs-zab.md

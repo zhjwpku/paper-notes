@@ -13,6 +13,7 @@
 - **[Paxos Made Live][paxos-live]**
 - **[Viewstamped Replication][vr]**
 - **[Zab: High-performance broadcast for primary-backup systems][zab]**
+- **[Vive La Difference: Paxos vs. Viewstamped Replication vs. Zab][vivela]**
 - **[In Search of an Understandable Consensus Algorithm][raft]**
 
 #### References
@@ -26,3 +27,4 @@
 [flp]: flp.md
 [zab]: zab.md
 [vr]: vr.md
+[vivela]: paxos-vs-vr-vs-zab.md
