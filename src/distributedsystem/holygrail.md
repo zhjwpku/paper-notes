@@ -61,3 +61,7 @@ Vector Time 的主要缺点是它的大小，由于需要在发送消息是附�
 #### Detecting Behavioral Patterns
 
 由于相对较难理解，还没深入看 :()
+
+#### Further readings
+
+[1] [Timestamps in Message-Passing Systems That Preserve the Partial Ordering](https://fileadmin.cs.lth.se/cs/Personal/Amr_Ergawy/dist-algos-papers/4.pdf)
