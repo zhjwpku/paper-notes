@@ -16,6 +16,10 @@
 - **[Vive La Difference: Paxos vs. Viewstamped Replication vs. Zab][vivela]**
 - **[In Search of an Understandable Consensus Algorithm][raft]**
 
+#### Further readings
+
+[1] [The ABCD’s of Paxos](../../assets/pdfs/paxos-abcd.pdf) by Butler W. Lampson, PODC 2001
+
 #### References
 
 [1] [Can’t we all just agree?](https://blog.acolyer.org/2015/03/01/cant-we-all-just-agree/)
