@@ -26,7 +26,8 @@
 
 #### References
 
-[1] [Can’t we all just agree?](https://blog.acolyer.org/2015/03/01/cant-we-all-just-agree/)
+[1] [Can’t we all just agree?](https://blog.acolyer.org/2015/03/01/cant-we-all-just-agree/)<br>
+[2] [Distributed Consensus Reading List 📚](https://github.com/heidihoward/distributed-consensus-reading-list) maintained by Heidi Howard
 
 
 [paxos-simple]: paxos-made-simple.md
