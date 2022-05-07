@@ -15,6 +15,7 @@
 - **[Zab: High-performance broadcast for primary-backup systems][zab]**
 - **[Vive La Difference: Paxos vs. Viewstamped Replication vs. Zab][vivela]**
 - **[In Search of an Understandable Consensus Algorithm][raft]**
+- **[Paxos vs Raft: have we reached consensus on distributed consensus?][paxos-vs-raft]**
 
 #### Further readings
 
@@ -35,3 +36,4 @@
 [zab]: zab.md
 [vr]: vr.md
 [vivela]: paxos-vs-vr-vs-zab.md
+[paxos-vs-raft]: paxos-vs-raft.md

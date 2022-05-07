@@ -37,6 +37,7 @@
     - [zab](./distributedsystem/consensus/zab.md)
     - [paxos vs. vr vs. zab](./distributedsystem/consensus/paxos-vs-vr-vs-zab.md)
     - [raft](./distributedsystem/consensus/raft.md)
+    - [paxos vs raft](./distributedsystem/consensus/paxos-vs-raft.md)
   - [primary backup](./distributedsystem/primary-backup.md)
   - [chain replication](./distributedsystem/chain-replication.md)
   - [holy grail](./distributedsystem/holygrail.md)
