@@ -28,6 +28,7 @@
   - [orc](./datalayout/orc.md)
 - [data structures](./datastructure/README.md)
   - [skip list](./datastructure/skiplist.md)
+  - [bloom filter](./datastructure/bloom-filter.md)
 - [distributed system](./distributedsystem/README.md)
   - [consensus](./distributedsystem/consensus/README.md)
     - [flp](./distributedsystem/consensus/flp.md)
