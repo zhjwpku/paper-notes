@@ -23,6 +23,8 @@
 - **[Distributed Snapshots: Determining Global States of Distributed Systems][chandy]**
 - **[Lightweight Asynchronous Snapshots for Distributed Dataflows][abs]**
 - **[ZooKeeper: wait-free coordination for internet-scale systems][zookeeper]**
+- **[scheduler](./scheduler/index.html)**
+  - **[Large-scale cluster management at Google with Borg][borg]**
 
 [primary-backup]: primary-backup.md
 [chain-replication]: chain-replication.md
@@ -38,3 +40,4 @@
 [vr]: consensus/vr.md
 [vivala]: consensus/paxos-vs-vr-vs-zab.md
 [paxos-vs-raft]: consensus/paxos-vs-raft.md
+[borg]: scheduler/borg.md
