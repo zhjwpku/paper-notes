@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>mmdb overview - 论文阅读笔记</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../benchmarks/ssb.html"><strong aria-hidden="true">1.1.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/index.html"><strong aria-hidden="true">3.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">3.1.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../../databases/kv/index.html"><strong aria-hidden="true">3.2.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">3.2.1.</strong> rocksdb cidr17</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/mmdb/index.html"><strong aria-hidden="true">3.3.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/mmdb/overview.html" class="active"><strong aria-hidden="true">3.3.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/olap/index.html"><strong aria-hidden="true">3.4.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/olap/lakehouse.html"><strong aria-hidden="true">3.4.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../../databases/olap/delta-lake.html"><strong aria-hidden="true">3.4.2.</strong> delta lake</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/cdc/index.html"><strong aria-hidden="true">3.5.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/cdc/dblog.html"><strong aria-hidden="true">3.5.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/rum.html"><strong aria-hidden="true">3.6.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../datalayout/index.html"><strong aria-hidden="true">4.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datalayout/c-store.html"><strong aria-hidden="true">4.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../../datalayout/dremel.html"><strong aria-hidden="true">4.2.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../../datalayout/rcfile.html"><strong aria-hidden="true">4.3.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../../datalayout/orc.html"><strong aria-hidden="true">4.4.</strong> orc</a></li></ol></li><li class="chapter-item expanded "><a href="../../datastructure/index.html"><strong aria-hidden="true">5.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datastructure/skiplist.html"><strong aria-hidden="true">5.1.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../../datastructure/bloom-filter.html"><strong aria-hidden="true">5.2.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/index.html"><strong aria-hidden="true">6.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/index.html"><strong aria-hidden="true">6.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/flp.html"><strong aria-hidden="true">6.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">6.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">6.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/vr.html"><strong aria-hidden="true">6.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/zab.html"><strong aria-hidden="true">6.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">6.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/raft.html"><strong aria-hidden="true">6.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">6.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/index.html"><strong aria-hidden="true">6.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">6.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/primary-backup.html"><strong aria-hidden="true">6.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chain-replication.html"><strong aria-hidden="true">6.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/bolosky.html"><strong aria-hidden="true">6.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/holygrail.html"><strong aria-hidden="true">6.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chandy.html"><strong aria-hidden="true">6.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/abs.html"><strong aria-hidden="true">6.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/zookeeper.html"><strong aria-hidden="true">6.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../../fs/index.html"><strong aria-hidden="true">7.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../fs/gfs.html"><strong aria-hidden="true">7.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../../fs/polarfs.html"><strong aria-hidden="true">7.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/index.html"><strong aria-hidden="true">8.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/index.html"><strong aria-hidden="true">8.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/dynamo.html"><strong aria-hidden="true">8.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/kudu.html"><strong aria-hidden="true">8.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../../storage/bluestore.html"><strong aria-hidden="true">8.3.</strong> bluestore</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/databases/mmdb/overview.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="main-memory-database-systems-an-overview"><a class="header" href="#main-memory-database-systems-an-overview"><a href="../../assets/pdfs/main_memory_database_systems_an_overview.pdf">Main Memory Database Systems: An Overview</a></a></h3>
+<blockquote>
+<p>IEEE Transactions on Knowledge and Data Engineering, H. Garcia-Molina, 1992</p>
+<p>https://dl.acm.org/doi/10.1109/69.180602</p>
+</blockquote>
+<p>这是一篇 1992 年的 paper，虽然那时的内存容量可能只有几十兆上百兆，但 MMDB 已经开始崭露头角，人们希望通过将数据全量驻留在内存来提供更快的响应时间及更大的事务吞吐。传统数据库（DRDB）可以将磁盘数据缓存在内存中加速查询，MMDB 需要将数据在磁盘备份以防数据丢失。</p>
+<p><code>MMDB</code> 和 <code>DRDB with a very large cache</code> 有何不同呢？DRDB 在设计的时候假设内存不足以保存所有数据，因此没有充分利用内存的特性。而 MMDB 在设计之初就假设数据可以全量存储在内存，其各模块都存在着一些与 DRDB 不同的点。</p>
+<h4 id="concurrency-control"><a class="header" href="#concurrency-control">Concurrency Control</a></h4>
+<ol>
+<li>访存远快于读盘，因而事务能够快速结束，同时意味着锁不会长时间持有，可以锁的粒度可以加大</li>
+<li>由于数据存储在内存，因此锁机制可以通过数据对象的少量比特位来实现</li>
+</ol>
+<h4 id="commit-processing"><a class="header" href="#commit-processing">Commit Processing</a></h4>
+<p>数据需要通过日志持久化，对于 MMDB，日志的开销占比显得非常突出。解决该问题的办法包括：</p>
+<ol>
+<li>Stable main memory 可以缓解事务的响应时间但不能消除日志瓶颈</li>
+<li>Precommit 事务写完日志就可以响应请求</li>
+<li>Group Commit 将多个事务的日志攒批落盘，可减少 IO</li>
+</ol>
+<h4 id="access-method"><a class="header" href="#access-method">Access Method</a></h4>
+<p>不再需要 B-Tree，索引可以通过排序的链表来实现。</p>
+<h4 id="data-representation"><a class="header" href="#data-representation">Data Representation</a></h4>
+<p>关系元组可以通过一组指针来表示。</p>
+<h4 id="query-processing"><a class="header" href="#query-processing">Query Processing</a></h4>
+<p>顺序访问与随机访问的速度对于内存而言差别不大，因此依赖快速顺序访问的查询算法不再具有优势，如 sort-merge join。但 process cost 变得难以预测。</p>
+<h4 id="recovery"><a class="header" href="#recovery">Recovery</a></h4>
+<p>在 MMDB 中，Checkpoint 和 Recovery 是需要访问磁盘数据的两个唯一原因。因此磁盘访问可以对 Checkpionter 进行优化，比如使用加大的 block size。在恢复的时候可以采用 <code>on demand</code> 的方式从磁盘恢复数据或使用磁盘分配或磁盘阵列来并行读取数据以加速恢复。</p>
+<h4 id="performance"><a class="header" href="#performance">Performance</a></h4>
+<p>传统数据库备份对性能的影响要远小于 MMDB，因此 checkpoint 算法在 MMDB 显得至关重要。</p>
+<h4 id="application-programming-interface-and-protection"><a class="header" href="#application-programming-interface-and-protection">Application Programming Interface and Protection</a></h4>
+<ol>
+<li>Once the transaction can access the database directly, they can read or modify unauthorized parts</li>
+<li>and the system has no way of knowing what has been modified, so it can not log the cahnges</li>
+</ol>
+<p>最佳的解决方案是只运行由特定数据库系统编译器编译过的事务。</p>
+<h4 id="data-clustering-and-migration"><a class="header" href="#data-clustering-and-migration">Data Clustering and Migration</a></h4>
+<p>Migration and dynamic clustering are components of a MMDB that have no counterpart in conventional database systems.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../databases/mmdb/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../databases/olap/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../databases/mmdb/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../databases/olap/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

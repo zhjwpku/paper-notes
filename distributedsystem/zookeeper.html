@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>zookeeper - 论文阅读笔记</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../benchmarks/ssb.html"><strong aria-hidden="true">1.1.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/index.html"><strong aria-hidden="true">3.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">3.1.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../databases/kv/index.html"><strong aria-hidden="true">3.2.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">3.2.1.</strong> rocksdb cidr17</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/mmdb/index.html"><strong aria-hidden="true">3.3.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/mmdb/overview.html"><strong aria-hidden="true">3.3.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/olap/index.html"><strong aria-hidden="true">3.4.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/olap/lakehouse.html"><strong aria-hidden="true">3.4.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../databases/olap/delta-lake.html"><strong aria-hidden="true">3.4.2.</strong> delta lake</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/cdc/index.html"><strong aria-hidden="true">3.5.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/cdc/dblog.html"><strong aria-hidden="true">3.5.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/rum.html"><strong aria-hidden="true">3.6.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../datalayout/index.html"><strong aria-hidden="true">4.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datalayout/c-store.html"><strong aria-hidden="true">4.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../datalayout/dremel.html"><strong aria-hidden="true">4.2.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../datalayout/rcfile.html"><strong aria-hidden="true">4.3.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../datalayout/orc.html"><strong aria-hidden="true">4.4.</strong> orc</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/index.html"><strong aria-hidden="true">5.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/skiplist.html"><strong aria-hidden="true">5.1.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../datastructure/bloom-filter.html"><strong aria-hidden="true">5.2.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/index.html"><strong aria-hidden="true">6.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/index.html"><strong aria-hidden="true">6.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/flp.html"><strong aria-hidden="true">6.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">6.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">6.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/vr.html"><strong aria-hidden="true">6.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/zab.html"><strong aria-hidden="true">6.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">6.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/raft.html"><strong aria-hidden="true">6.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">6.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/index.html"><strong aria-hidden="true">6.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">6.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/primary-backup.html"><strong aria-hidden="true">6.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chain-replication.html"><strong aria-hidden="true">6.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/bolosky.html"><strong aria-hidden="true">6.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../distributedsystem/holygrail.html"><strong aria-hidden="true">6.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chandy.html"><strong aria-hidden="true">6.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../distributedsystem/abs.html"><strong aria-hidden="true">6.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../distributedsystem/zookeeper.html" class="active"><strong aria-hidden="true">6.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../fs/index.html"><strong aria-hidden="true">7.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../fs/gfs.html"><strong aria-hidden="true">7.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../fs/polarfs.html"><strong aria-hidden="true">7.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/index.html"><strong aria-hidden="true">8.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/index.html"><strong aria-hidden="true">8.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/dynamo.html"><strong aria-hidden="true">8.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/kudu.html"><strong aria-hidden="true">8.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../storage/bluestore.html"><strong aria-hidden="true">8.3.</strong> bluestore</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/distributedsystem/zookeeper.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="zookeeper-wait-free-coordination-for-internet-scale-systems"><a class="header" href="#zookeeper-wait-free-coordination-for-internet-scale-systems"><a href="../assets/pdfs/zookeeper.pdf">ZooKeeper: wait-free coordination for internet-scale systems</a></a></h3>
+<blockquote>
+<p>USENIX ATC'10</p>
+<p>https://dl.acm.org/doi/10.5555/1855840.1855851</p>
+</blockquote>
+<p>ZooKeeper 提供的接口具有 wait-free 的特点，每个客户端的请求以 <code>FIFO</code> 顺序执行（FIFO client order），而改变 ZooKeeper 状态的请求则具有 <code>linearizablity</code> 的特性（Linearizable writes）。</p>
+<p>大型分布式应用往往需要不同形式的协同(coordination)，包括:</p>
+<ul>
+<li>Configuration</li>
+<li>Group membership</li>
+<li>Leader election</li>
+<li>Locks</li>
+</ul>
+<p>其中 <code>Locks</code> 作为一种较强的协同服务可以用来实现较弱的协同服务，如 <code>Group membership</code>、<code>Leader election</code> 等。ZooKeeper 实现了一个类似文件系统的接口，具有操作简单、 <code>wait-free</code> 的特点。</p>
+<blockquote>
+<p>Implementing wait-free data objects, however, differentiates Zookeeper significantly
+from systems based on blocking primitives such as locks.</p>
+</blockquote>
+<p>ZooKeeper 的状态变更依赖 <a href="./consensus/zab.html">Zab</a> 原子广播协议。所有的写操作都会重定向到 Leader 节点，读操作则使用在 Follower 本地执行。</p>
+<p>ZooKeeper 通常用来存储应用的元数据，读操作的比例往往远大于写操作，因此在客户端缓存数据能提高读性能。</p>
+<blockquote>
+<p>ZooKeeper uses a watch mechanism to enable clients to cache data without managing the client cache directly.</p>
+</blockquote>
+<p>ZooKeeper 中的几个概念:</p>
+<ul>
+<li>client: 使用 ZooKeeper 服务的用户</li>
+<li>server: ZooKeeper 集群中的一个节点，即 zookeeper 进程</li>
+<li>znode: ZooKeeper 中的内存数据节点，类比文件系统中的 DIR 或 FILE</li>
+<li>data tree: znode 构成的分层命名空间，类比文件系统</li>
+<li>session: 客户端连接 ZooKeeper 服务时创建的连接句柄</li>
+</ul>
+<h4 id="znode"><a class="header" href="#znode">znode</a></h4>
+<p>znode 具有两种形态，<code>Regular</code> 类型的 znode 需要用户显示创建和删除；<code>Ephemeral</code> 类型的 znode 由用户创建，session 断开后由系统自动删除。</p>
+<blockquote>
+<p>All znodes store data, and all znodes, except for <code>ephemeral</code> znodes, can have children.</p>
+</blockquote>
+<p>创建 znode 时可以指定 <code>sequential</code> 标志。znode 存储的数据上限为 1MB。</p>
+<blockquote>
+<p>Nodes created with the sequential flag set have the value of a monotonically increasing counter appended to its name.</p>
+</blockquote>
+<h4 id="client-api"><a class="header" href="#client-api">Client API</a></h4>
+<ul>
+<li>create(path, data, flags)</li>
+<li>delete(path, version)</li>
+<li>exists(path, watch)</li>
+<li>getData(path, watch)</li>
+<li>setData(path, data, version)</li>
+<li>getChildren(path, watch)</li>
+<li>sync(path)</li>
+</ul>
+<p>所有接口都具有两个版本，一个同步一个异步。</p>
+<blockquote>
+<p>The asynchronous API, however, enables an application to have both multiple
+outstanding ZooKeeper operations and other tasks executed in parallel.</p>
+</blockquote>
+<p>由于读操作可以在任意 server 上进行，因此可能读到旧数据，<code>sync</code> 接口用以解决该问题:</p>
+<blockquote>
+<p>sync causes a server to apply all pending write requests before processing the
+read without the overhead of a full write.</p>
+</blockquote>
+<h4 id="使用-zookeeper-api-实现协同元语"><a class="header" href="#使用-zookeeper-api-实现协同元语">使用 ZooKeeper API 实现协同元语</a></h4>
+<p>通过 ZooKeeper API 可以在客户端实现 <code>Configuration Management</code>、<code>Rendezvous</code>、<code>Group Membership</code>、<code>Locks</code>、<code>Double Barrier</code> 等协同。</p>
+<p><strong>lock</strong></p>
+<p><img src="../assets/images/zookeeper_lock.jpg" alt="lock" /></p>
+<p><strong>rwlock</strong></p>
+<p><img src="../assets/images/zookeeper_rwlock.jpg" alt="rwlock" /></p>
+<h4 id="implementation"><a class="header" href="#implementation">Implementation</a></h4>
+<p>ZooKeeper 的内部模块如下图所示:</p>
+<p><img src="../assets/images/zookeeper_components.jpg" alt="zookeeper component" /></p>
+<p>写操作发送给 Leader 的 <code>Request Processor</code> 模块，通过计算执行该操作后的状态来判断该操作是否应该被 apply，如果可行则生成一个幂等的事务提交给 <code>Atomic Broadcast</code> 模块，该模块负责复制状态机的一致性，读操作则直接提交给 <code>Replicated Database</code>。</p>
+<p><code>Replicated database</code> 是一个内存数据库，通过定期执行 <code>fuzzy snapshot</code> 来减少回放的时间，由于 WAL 中记录的事务日志具有幂等的特性，snapshot 不需要加锁。</p>
+<p>读请求在每台服务器本地处理。每个读请求用其所在服务器看到的最后一个事务的 zxid 进行标记后处理。</p>
+<p>ZooKeeper 使用超时机制来检测客户端会话失效。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../distributedsystem/abs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../fs/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../distributedsystem/abs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../fs/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

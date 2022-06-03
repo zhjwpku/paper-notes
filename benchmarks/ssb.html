@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ssb - 论文阅读笔记</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../benchmarks/ssb.html" class="active"><strong aria-hidden="true">1.1.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/index.html"><strong aria-hidden="true">3.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">3.1.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../databases/kv/index.html"><strong aria-hidden="true">3.2.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">3.2.1.</strong> rocksdb cidr17</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/mmdb/index.html"><strong aria-hidden="true">3.3.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/mmdb/overview.html"><strong aria-hidden="true">3.3.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/olap/index.html"><strong aria-hidden="true">3.4.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/olap/lakehouse.html"><strong aria-hidden="true">3.4.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../databases/olap/delta-lake.html"><strong aria-hidden="true">3.4.2.</strong> delta lake</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/cdc/index.html"><strong aria-hidden="true">3.5.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/cdc/dblog.html"><strong aria-hidden="true">3.5.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/rum.html"><strong aria-hidden="true">3.6.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../datalayout/index.html"><strong aria-hidden="true">4.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datalayout/c-store.html"><strong aria-hidden="true">4.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../datalayout/dremel.html"><strong aria-hidden="true">4.2.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../datalayout/rcfile.html"><strong aria-hidden="true">4.3.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../datalayout/orc.html"><strong aria-hidden="true">4.4.</strong> orc</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/index.html"><strong aria-hidden="true">5.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/skiplist.html"><strong aria-hidden="true">5.1.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../datastructure/bloom-filter.html"><strong aria-hidden="true">5.2.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/index.html"><strong aria-hidden="true">6.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/index.html"><strong aria-hidden="true">6.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/flp.html"><strong aria-hidden="true">6.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">6.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">6.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/vr.html"><strong aria-hidden="true">6.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/zab.html"><strong aria-hidden="true">6.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">6.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/raft.html"><strong aria-hidden="true">6.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">6.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/index.html"><strong aria-hidden="true">6.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">6.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/primary-backup.html"><strong aria-hidden="true">6.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chain-replication.html"><strong aria-hidden="true">6.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/bolosky.html"><strong aria-hidden="true">6.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../distributedsystem/holygrail.html"><strong aria-hidden="true">6.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chandy.html"><strong aria-hidden="true">6.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../distributedsystem/abs.html"><strong aria-hidden="true">6.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../distributedsystem/zookeeper.html"><strong aria-hidden="true">6.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../fs/index.html"><strong aria-hidden="true">7.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../fs/gfs.html"><strong aria-hidden="true">7.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../fs/polarfs.html"><strong aria-hidden="true">7.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/index.html"><strong aria-hidden="true">8.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/index.html"><strong aria-hidden="true">8.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/dynamo.html"><strong aria-hidden="true">8.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/kudu.html"><strong aria-hidden="true">8.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../storage/bluestore.html"><strong aria-hidden="true">8.3.</strong> bluestore</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/benchmarks/ssb.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="star-schema-benchmark"><a class="header" href="#star-schema-benchmark"><a href="../assets/pdfs/StarSchemaB.pdf">Star Schema Benchmark</a></a></h3>
+<blockquote>
+<p>by P O'Neil 2009</p>
+<p>https://www.cs.umb.edu/~poneil/StarSchemaB.PDF</p>
+</blockquote>
+<p>星型模型在数仓中使用广泛，在该模型中，多个维表（dimension tables）围绕一个事实表（fact table），因此可以减少不必要的外键及 join，查询复杂度较低，但却由于不严格遵循范式，存储在数据冗余。</p>
+<p>Star Schema Benchmark 将 TPC-H 的雪花模型改造成了星型模式，以测试数仓在决策支持场景下性能表现。</p>
+<blockquote>
+<p>We depart from the TPC-H query format for a number of reasons, most commonly to make
+an attempt to provide the <code>Functional Coverage</code> and <code>Selectivity Coverage</code> features.</p>
+</blockquote>
+<p>对于查询语句的选择，SSB 主要考虑:</p>
+<ul>
+<li>Functional Coverage: 尽可能选择星型模式中常见的重要查询以满足用户的预期</li>
+<li>Selectivity Coverage: 通过对维表条件的选择可以决定事实表检索的数量（total Filter Factor）</li>
+</ul>
+<h4 id="ssb-的表结构"><a class="header" href="#ssb-的表结构">SSB 的表结构</a></h4>
+<p><img src="../assets/images/ssb_schema.jpg" alt="SSB Schema" /></p>
+<p>事实表将 TPC-H 中的 <code>LINEITEM</code> 和 <code>ORDERS</code> 进行了合并，更加符合数仓的标准，增加了冗余，同时减少了在查询过程中不必要的 join 计算。</p>
+<p>对比 TPC-H 的表结构为:</p>
+<p><img src="../assets/images/ssb_tpc_h.jpg" alt="TPC-H Schema" /></p>
+<h4 id="ssb-queries"><a class="header" href="#ssb-queries">SSB Queries</a></h4>
+<p>Q1: 选择一个维表（date）作为查询过滤条件，计算给定<code>日期范围</code>内，折扣和销售数量在某个范围内的订单的<code>销售收入</code>之和。</p>
+<pre><code class="language-sql">select sum(lo_extendedprice * lo_discount) as revenue
+ from lineorder, date
+ where lo_orderdate = d_datekey
+  and [DATE_FILTER]
+  and [LO_DISCOUNT_FILTER]
+  and [LO_QUANTITY_FILTER]; 
+</code></pre>
+<p>Q2: 对两个维表（part、supplier）进行查询过滤，计算每个品牌每年带来的收入之和。</p>
+<pre><code class="language-sql">select sum(lo_revenue), d_year, p_brand1
+ from lineorder, date, part, supplier
+ where lo_orderdate = d_datekey
+  and lo_partkey = p_partkey
+  and lo_suppkey = s_suppkey
+  and [PART_FILTER]
+  and [S_REGION_FILTER]
+ group by d_year, p_brand1
+ order by d_year, p_brand1; 
+</code></pre>
+<p>Q3: 对三个维表（customer、supplier 和 date）进行查询过滤，根据客户所在国家、供应商所在国家及日期限制计算收入之和。</p>
+<pre><code class="language-sql">select c_nation, s_nation, d_year, sum(lo_revenue) as revenue
+ from customer, lineorder, supplier, date
+ where lo_custkey = c_custkey
+  and lo_suppkey = s_suppkey
+  and lo_orderdate = d_datekey
+  and [CUSTOMOR_FILTER]
+  and [SUPPLIER_FILTER]
+  and [DATE_FILTER]
+ group by c_nation, s_nation, d_year
+ order by d_year asc, revenue desc;
+</code></pre>
+<p>Q4: 对四个维表（全部）进行查询过滤:</p>
+<p>Q4.1</p>
+<pre><code class="language-sql">select d_year, c_nation, sum(lo_revenue - lo_supplycost) as profit
+ from date, customer, supplier, part, lineorder
+ where lo_custkey = c_custkey
+  and lo_suppkey = s_suppkey
+  and lo_partkey = p_partkey
+  and lo_orderdate = d_datekey
+  and c_region = 'AMERICA'
+  and s_region = 'AMERICA'
+  and (p_mfgr = 'MFGR#1' or p_mfgr = 'MFGR#2')
+ group by d_year, c_nation
+ order by d_year, c_nation;
+</code></pre>
+<p>Q4.2</p>
+<pre><code class="language-sql">select d_year, s_nation, p_category, sum(lo_revenue - lo_supplycost) as profit
+ from date, customer, supplier, part, lineorder
+ where lo_custkey = c_custkey
+  and lo_suppkey = s_suppkey
+  and lo_partkey = p_partkey
+  and lo_orderdate = d_datekey
+  and c_region = 'AMERICA'
+  and s_region = 'AMERICA'
+  and (d_year = 1997 or d_year = 1998)
+  and (p_mfgr = 'MFGR#1' or p_mfgr = 'MFGR#2')
+ group by d_year, s_nation, p_category
+ order by d_year, s_nation, p_category;
+</code></pre>
+<p>Q4.3</p>
+<pre><code class="language-sql">select d_year, s_city, p_brand1, sum(lo_revenue - lo_supplycost) as profit
+ from date, customer, supplier, part, lineorder
+ where lo_custkey = c_custkey
+  and lo_suppkey = s_suppkey
+  and lo_partkey = p_partkey
+  and lo_orderdate = d_datekey
+  and c_region = 'AMERICA'
+  and s_nation = 'UNITED STATES'
+  and (d_year = 1997 or d_year = 1998)
+  and p_category = 'MFGR#14'
+ group by d_year, s_city, p_brand1
+ order by d_year, s_city, p_brand1;
+</code></pre>
+<p>四类查询共 13 个查询对事实表的 Filter Factor 如下表所示：</p>
+<p><img src="../assets/images/ssb_filter_factor.jpg" alt="Filter Factor" /></p>
+<h4 id="references"><a class="header" href="#references">References:</a></h4>
+<p>[1] <a href="https://github.com/eyalroz/ssb-dbgen">Star Schema Benchmark data set generator (ssb-dbgen)</a><br>
+[2] <a href="https://www.geeksforgeeks.org/difference-between-star-schema-and-snowflake-schema/">Difference between Star Schema and Snowflake Schema</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../benchmarks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../bigdata/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../benchmarks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../bigdata/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
