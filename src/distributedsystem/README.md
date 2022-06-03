@@ -19,6 +19,7 @@
   - **[Paxos vs Raft: have we reached consensus on distributed consensus?][paxos-vs-raft]**
 - **[A principle for resilient sharing of distributed resources][primary-backup]**
 - **[Chain Replication for Supporting High Throughput and Availability][chain-replication]**
+- **[Paxos Replicated State Machines as the Basis of a High-Performance Data Store][bolosky]**
 - **[Detecting Causal Relationships in Distributed Computations: In Search of the Holy Grail][holygrail]**
 - **[Distributed Snapshots: Determining Global States of Distributed Systems][chandy]**
 - **[Lightweight Asynchronous Snapshots for Distributed Dataflows][abs]**
@@ -41,3 +42,4 @@
 [vivala]: consensus/paxos-vs-vr-vs-zab.md
 [paxos-vs-raft]: consensus/paxos-vs-raft.md
 [borg]: scheduler/borg.md
+[bolosky]: bolosky.md
