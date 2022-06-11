@@ -1,6 +1,6 @@
 language: rust
 os: linux
-dist: xenial
+dist: bionic
 
 cache:
   - cargo
