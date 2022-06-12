@@ -1,6 +1,6 @@
 # 论文笔记
 
-[![Build Status](https://app.travis-ci.com/zhjwpku/paper-notes.svg?branch=master)](https://app.travis-ci.com/zhjwpku/paper-notes)
+[![github pages](https://github.com/zhjwpku/paper-notes/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/zhjwpku/paper-notes/actions/workflows/gh-pages.yml)
 
 I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally.
 
