@@ -26,6 +26,7 @@
   - [dremel](./datalayout/dremel.md)
   - [rcfile](./datalayout/rcfile.md)
   - [orc](./datalayout/orc.md)
+  - [table placement methods](./datalayout/table-placement-methods.md)
 - [data structures](./datastructure/README.md)
   - [skip list](./datastructure/skiplist.md)
   - [bloom filter](./datastructure/bloom-filter.md)
