@@ -70,4 +70,5 @@ ORC 使用了两级压缩模式，一个流首先根据其数据类型进行编�
 #### More Readings:
 
 [1] [Create a new Optimized Row Columnar file format for Hive](https://issues.apache.org/jira/browse/HIVE-3874)<br>
-[2] [ORC File Intro](../assets/ppts/OrcFileIntro.pptx)
+[2] [ORC File Intro](../assets/ppts/OrcFileIntro.pptx)<br>
+[3] [Evolving Draft for ORC Specification v2](https://orc.apache.org/specification/ORCv2/)
