@@ -6,6 +6,10 @@
 - **[Major Technical Advancements in Apache Hive][orc]**
 - **[Table Placement Methods][tpm]**
 
+#### Further readings
+
+[1] [Apache Arrow vs. Parquet and ORC: Do we really need a third Apache project for columnar data representation?](http://dbmsmusings.blogspot.com/2017/10/apache-arrow-vs-parquet-and-orc-do-we.html) by Daniel Abadi, 2017<br>
+
 [cstore]: c-store.md
 [dremel]: dremel.md
 [rcfile]: rcfile.md
