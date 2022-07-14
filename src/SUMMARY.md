@@ -18,6 +18,8 @@
   - [olap](./databases/olap/README.md)
     - [lakehouse](./databases/olap/lakehouse.md)
     - [delta lake](./databases/olap/delta-lake.md)
+  - [htap](./databases/htap/README.md)
+    - [greenplum](./databases/htap/greenplum-htap.md)
   - [cdc](./databases/cdc/README.md)
     - [dblog](./databases/cdc/dblog.md)
   - [rum conjecture](./databases/rum.md)
