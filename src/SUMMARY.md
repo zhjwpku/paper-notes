@@ -25,6 +25,7 @@
   - [rum conjecture](./databases/rum.md)
 - [datalayout](./datalayout/README.md)
   - [cstore](./datalayout/c-store.md)
+  - [cstore compression](./datalayout/c-store-compression.md)
   - [dremel](./datalayout/dremel.md)
   - [rcfile](./datalayout/rcfile.md)
   - [orc](./datalayout/orc.md)
