@@ -6,6 +6,8 @@
 - **[KV databases](kv/index.html)**
 - **[OLAP](olap/index.html)**
   - **[Lakehouse: A New Generation of Open Platforms that Unify DataWarehousing and Advanced Analytics][lakehouse]**
+  - **[Delta Lake: HighPerformance ACID Table Storage over Cloud Object Stores][deltalake]**
+  - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Change Data Capture](cdc/index.html)**
@@ -18,3 +20,5 @@
 [dblog]: cdc/dblog.md
 [rum]: rum.md
 [greenplum]: htap/greenplum-htap.md
+[deltalake]: olap/delta-lake.md
+[vertica]: olap/vertica.md

@@ -18,6 +18,7 @@
   - [olap](./databases/olap/README.md)
     - [lakehouse](./databases/olap/lakehouse.md)
     - [delta lake](./databases/olap/delta-lake.md)
+    - [vertica](./databases/olap/vertica.md)
   - [htap](./databases/htap/README.md)
     - [greenplum](./databases/htap/greenplum-htap.md)
   - [cdc](./databases/cdc/README.md)
