@@ -12,7 +12,7 @@
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Change Data Capture](cdc/index.html)**
   - **[DBLog: AWatermark Based Change-Data-Capture Framework][dblog]**
-- **[Designing Access Methods: The RUM Conjecture][run]**
+- **[Designing Access Methods: The RUM Conjecture][rum]**
 
 [column-stores-vs-row-stores]: colum-stores-vs-row-stores.md
 [mmdb-overview]: mmdb/overview.md
