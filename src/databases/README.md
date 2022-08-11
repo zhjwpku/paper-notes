@@ -4,6 +4,7 @@
 - **[Main Memory Database Systems](mmdb/index.html)**
   - **[Main Memory Database Systems: An Overview][mmdb-overview]**
 - **[KV databases](kv/index.html)**
+  - **[Optimizing Space Amplification in RocksDB][rocksdb-cidr17]**
 - **[OLAP](olap/index.html)**
   - **[Lakehouse: A New Generation of Open Platforms that Unify DataWarehousing and Advanced Analytics][lakehouse]**
   - **[Delta Lake: HighPerformance ACID Table Storage over Cloud Object Stores][deltalake]**
@@ -27,3 +28,4 @@
 [greenplum]: htap/greenplum-htap.md
 [deltalake]: olap/delta-lake.md
 [vertica]: olap/vertica.md
+[rocksdb-cidr17]: kv/optimizing-space-amplification-in-rocksdb.md
