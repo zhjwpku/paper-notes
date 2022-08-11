@@ -14,6 +14,11 @@
   - **[DBLog: AWatermark Based Change-Data-Capture Framework][dblog]**
 - **[Designing Access Methods: The RUM Conjecture][rum]**
 
+#### Optional readings
+
+- M. Stonebraker, et al., [What Goes Around Comes Around](./../assets/pdfs/whatgoesaround-stonebraker.pdf)
+- A. Pavlo, et al., [What’s Really New with NewSQL?](../assets/pdfs/pavlo-newsql-sigmodrec2016.pdf)
+
 [column-stores-vs-row-stores]: colum-stores-vs-row-stores.md
 [mmdb-overview]: mmdb/overview.md
 [lakehouse]: olap/lakehouse.md
