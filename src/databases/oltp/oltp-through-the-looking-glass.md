@@ -17,7 +17,7 @@
 
 ![Breakdown of instruction count for various DBMS components for the New Order transaction from TPC-C](../../assets/images/oltp-through-the-looking-glass-figure1.jpg)
 
-可以看出，`useful work` 只占所有指令的 1/60 左右。
+图中显示的 `useful work` 只占了所有指令的 1/60 左右，这证明了在传统数据库上仅仅将全部数据缓存到内存并不能获得优异的性能，还需要针对内存数据库的特点对 `Logging`、`Locking`、`Lacthing`、`Buffer Manager` 等模块进行更深入的优化。
 
 根据实验结果，论文给出了未来 OLTP 引擎的实现建议:
 
