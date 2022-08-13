@@ -7,6 +7,7 @@
   - **[Optimizing Space Amplification in RocksDB][rocksdb-cidr17]**
 - **[OLTP](oltp/index.html)**
   - **[OLTP Through the Looking Glass, and What We Found There][lookingglass]**
+  - **[Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores][staring-abyss]**
 - **[OLAP](olap/index.html)**
   - **[Lakehouse: A New Generation of Open Platforms that Unify DataWarehousing and Advanced Analytics][lakehouse]**
   - **[Delta Lake: HighPerformance ACID Table Storage over Cloud Object Stores][deltalake]**
@@ -32,3 +33,4 @@
 [vertica]: olap/vertica.md
 [rocksdb-cidr17]: kv/optimizing-space-amplification-in-rocksdb.md
 [lookingglass]: oltp/oltp-through-the-looking-glass.md
+[staring-abyss]: oltp/staring-into-the-abyss.md
