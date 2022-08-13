@@ -2,7 +2,7 @@
 
 [![github pages](https://github.com/zhjwpku/paper-notes/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/zhjwpku/paper-notes/actions/workflows/gh-pages.yml)
 
-I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally.
+I have changed this repo to a mdBook, run `mdbook serve` to read the notes locally or just visit [paper-notes.zhjwpku.com](https://paper-notes.zhjwpku.com).
 
 ## 目录(TOC)
 
