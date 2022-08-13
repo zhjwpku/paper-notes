@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>staring into the abyss - 论文阅读笔记</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../benchmarks/ssb.html"><strong aria-hidden="true">1.1.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/index.html"><strong aria-hidden="true">3.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">3.1.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../../databases/kv/index.html"><strong aria-hidden="true">3.2.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">3.2.1.</strong> rocksdb cidr17</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/mmdb/index.html"><strong aria-hidden="true">3.3.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/mmdb/overview.html"><strong aria-hidden="true">3.3.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/oltp/index.html"><strong aria-hidden="true">3.4.</strong> oltp</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/oltp/oltp-through-the-looking-glass.html"><strong aria-hidden="true">3.4.1.</strong> through the looking glass</a></li><li class="chapter-item expanded "><a href="../../databases/oltp/staring-into-the-abyss.html" class="active"><strong aria-hidden="true">3.4.2.</strong> staring into the abyss</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/olap/index.html"><strong aria-hidden="true">3.5.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/olap/lakehouse.html"><strong aria-hidden="true">3.5.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../../databases/olap/delta-lake.html"><strong aria-hidden="true">3.5.2.</strong> delta lake</a></li><li class="chapter-item expanded "><a href="../../databases/olap/vertica.html"><strong aria-hidden="true">3.5.3.</strong> vertica</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/htap/index.html"><strong aria-hidden="true">3.6.</strong> htap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/htap/greenplum-htap.html"><strong aria-hidden="true">3.6.1.</strong> greenplum</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/cdc/index.html"><strong aria-hidden="true">3.7.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/cdc/dblog.html"><strong aria-hidden="true">3.7.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/rum.html"><strong aria-hidden="true">3.8.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../datalayout/index.html"><strong aria-hidden="true">4.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datalayout/c-store.html"><strong aria-hidden="true">4.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../../datalayout/c-store-compression.html"><strong aria-hidden="true">4.2.</strong> cstore compression</a></li><li class="chapter-item expanded "><a href="../../datalayout/dremel.html"><strong aria-hidden="true">4.3.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../../datalayout/rcfile.html"><strong aria-hidden="true">4.4.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../../datalayout/orc.html"><strong aria-hidden="true">4.5.</strong> orc</a></li><li class="chapter-item expanded "><a href="../../datalayout/table-placement-methods.html"><strong aria-hidden="true">4.6.</strong> table placement methods</a></li></ol></li><li class="chapter-item expanded "><a href="../../datastructure/index.html"><strong aria-hidden="true">5.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datastructure/skiplist.html"><strong aria-hidden="true">5.1.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../../datastructure/bloom-filter.html"><strong aria-hidden="true">5.2.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/index.html"><strong aria-hidden="true">6.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/index.html"><strong aria-hidden="true">6.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/flp.html"><strong aria-hidden="true">6.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">6.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">6.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/vr.html"><strong aria-hidden="true">6.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/zab.html"><strong aria-hidden="true">6.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">6.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/raft.html"><strong aria-hidden="true">6.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">6.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/index.html"><strong aria-hidden="true">6.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">6.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/primary-backup.html"><strong aria-hidden="true">6.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chain-replication.html"><strong aria-hidden="true">6.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/bolosky.html"><strong aria-hidden="true">6.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/holygrail.html"><strong aria-hidden="true">6.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chandy.html"><strong aria-hidden="true">6.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/abs.html"><strong aria-hidden="true">6.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/zookeeper.html"><strong aria-hidden="true">6.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../../fs/index.html"><strong aria-hidden="true">7.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../fs/gfs.html"><strong aria-hidden="true">7.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../../fs/polarfs.html"><strong aria-hidden="true">7.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/index.html"><strong aria-hidden="true">8.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/index.html"><strong aria-hidden="true">8.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/dynamo.html"><strong aria-hidden="true">8.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/kudu.html"><strong aria-hidden="true">8.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../../storage/bluestore.html"><strong aria-hidden="true">8.3.</strong> bluestore</a></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/databases/oltp/staring-into-the-abyss.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="a-hrefassetspdfsstaring_into_the_abysspdfstaring-into-the-abyss-an-evaluation-of-concurrency-control-with-one-thousand-coresa"><a class="header" href="#a-hrefassetspdfsstaring_into_the_abysspdfstaring-into-the-abyss-an-evaluation-of-concurrency-control-with-one-thousand-coresa"><a href="../../assets/pdfs/staring_into_the_abyss.pdf">Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores</a></a></h3>
+<blockquote>
+<p>PVLDB, November 2014</p>
+<p>https://dl.acm.org/doi/10.14778/2735508.2735511</p>
+</blockquote>
+<p>计算机架构不再追求单核的时钟频率，越来越多的 CPU 转向 multi-core on a sinle Chip 的架构，out-of-order、super-scalar 开始逐渐被简单的 in-order、single issue 所代替。</p>
+<blockquote>
+<p>We are entering the era of the many-core machines that are powered
+by a large number of these smaller, low-power cores on a single chip.</p>
+</blockquote>
+<p>在这种趋势下，单节点、共享内存 OLTP DBMS 的扩展性显得尤为重要，如果现有的技术不能适应这种超多核架构，会出现各种瓶颈并造成计算资源的浪费。</p>
+<p>本论文对并发控制的可扩展性进行了研究，通过模拟在 1000 核的 CPU 上运行一个支持插拔 <strong>lock manager</strong> 进而替换不同并发控制算法的 OLTP 内存数据库，表明了现有的并发控制协议都不能随 core 数量的增加而扩展。</p>
+<blockquote>
+<p>Our analysis shows that all algorithms fail to scale as the number
+of cores increases. In each case, we identify the primary bottlenecks
+that are independent of the DBMS implementation and argue
+that even state-of-the-art systems suffer from these limitations.</p>
+</blockquote>
+<h4 id="concurrency-control-schemas"><a class="header" href="#concurrency-control-schemas">Concurrency Control Schemas</a></h4>
+<p>OLTP 负载中的事务通常具有三个显著特点:</p>
+<ol>
+<li>they are short-lived</li>
+<li>they touch a small subset of data using index look-ups (no full table scans or large joins)</li>
+<li>they are repetitive (i.e., executing the same queries with different inputs)</li>
+</ol>
+<p>Concurrency Control 为数据库提供了 ACID 中的 <code>Atomicity</code> 和 <code>Isolation</code>。所有的 Concurrency Control 都可归为以下两类:</p>
+<ol>
+<li>Two-Phase Locking (Pessimistic): Assume transactions will conflict so they must acquire locks on database objects before they are allowed to access them.
+<ul>
+<li>different transactions cannot simultaneously own conflicting locks</li>
+<li>once a transaction surrenders ownership of a lock, it may never obtain additional locks</li>
+</ul>
+</li>
+<li>Timestamp Ordering (Optimistic): Assume that conflicts are rare so transactions do not need to first acquire locks on database objects and instead check for conflicts at commit time.
+<ul>
+<li>a transaction is assigned a unique, monotonically increasing timestamp before it is executed</li>
+<li>this timestamp is used by the DBMS to process conflicting operations in the proper order</li>
+</ul>
+</li>
+</ol>
+<p>2PL 大大减少了死锁的概率，但却不能避免死锁的发生，因此不同的变种来解决死锁的问题:</p>
+<ol>
+<li>2PL with Deadlock Dection (DL_DETECT): 维护一个 <code>wait-for graph</code> 并检查是否有环来判断是否出现了死锁，当检测到有环出现时，系统需要 abort 一个事务来打破这个环</li>
+<li>2PL with Non-waiting Deadlock Prevention (NO_WAIT): 当获取不到锁时，直接将自己 abort 掉，避免死锁的出现</li>
+<li>2PL with Waiting Deadlock Prevention (WAIT_DIE): 事务允许等待比它新的事务持有的锁，如果要获取的锁被一个较老的事务持有，则将自己 abort 掉，这种算法需要在事务开始时获取一个时间戳，T/O 保证了不会出现死锁</li>
+</ol>
+<p>T/O 根据冲突检查的粒度（行级或分区级）和检查的时机（事务运行中或事务结束时）可以分为如下几个变种:</p>
+<ol>
+<li>Basic T/O (TIMESTAMP): 事务开始时获得时间戳，如果事务的时间戳小于元组最后一次写的时间戳，则拒绝读写；如果事务的时间戳小于元组的最后一次读时间戳，则拒绝写。该变种还需要拷贝元组来保证 <code>repeatable read</code></li>
+<li>Multi-version Concurrency Control (MVCC): 每个写操作都会创建一个新的版本，新版本标记有穿件它的时间戳。该变种的优点是 <strong>读不阻塞写，写不阻塞读</strong></li>
+<li>Optimisitic Concurrency Control (OCC): 事务开始时不分配时间戳，<strong>Read Phase</strong> 将需要读写的元组及写操作都记录在事务私有的工作区，<strong>Validation Phase</strong> 对要写的元组 <strong>加锁</strong> 并检查是否可以有冲突，<strong>Write Phase</strong> 则将没有冲突的事务修改 merge 到数据库并 <strong>释放锁</strong></li>
+<li>T/O with Partion-level Locking (H-STORE): 将数据库分为多个 partition，每个 partition 被一把锁保护，事务到来时分配一个时间戳并将事务放到所有与事务相关的目标分区的 <code>lock acquisition queue</code> 中，执行引擎根据队列中事务的时间戳大小来执行相应的事务</li>
+</ol>
+<h4 id="结论"><a class="header" href="#结论">结论</a></h4>
+<p>实验显示不同并发控制算法在 multi-core 架构上的 Scalability 都遇到了瓶颈:</p>
+<ul>
+<li><strong>Lock Thrashing</strong>: 一个事务的等待会造成另外一个事务更长的等待时间
+<ul>
+<li>DL_DETECT</li>
+<li>WAIT_DIE</li>
+</ul>
+</li>
+<li><strong>Timestamp Allocation</strong>: 所有需要分配时间戳的算法都会遇到时间戳分配的问题
+<ul>
+<li>All T/O algorithms</li>
+<li>WAIT_DIE</li>
+<li>HSTORE</li>
+</ul>
+</li>
+<li><strong>Memory Allocations</strong>: 因为需要拷贝元组需要分配内存
+<ul>
+<li>OCC</li>
+<li>MVCC</li>
+</ul>
+</li>
+<li><strong>Abort Rate</strong>: 由于冲突造成的事务回滚
+<ul>
+<li>OCC</li>
+<li>NO_WAIT</li>
+</ul>
+</li>
+</ul>
+<p>具体的结果数据参见原论文。</p>
+<h4 id="references"><a class="header" href="#references">References</a></h4>
+<p>[1] <a href="https://www.youtube.com/watch?v=a70jRWLjQFk&amp;list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O&amp;index=3">CMU 15-721 In-Memory Databases</a> and <a href="https://15721.courses.cs.cmu.edu/spring2020/notes/02-inmemory.pdf">the note</a> <br></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../databases/oltp/oltp-through-the-looking-glass.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../databases/olap/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../databases/oltp/oltp-through-the-looking-glass.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../databases/olap/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
