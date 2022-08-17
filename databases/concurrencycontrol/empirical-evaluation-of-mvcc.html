@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>evaluation of in-memory mvcc - 论文阅读笔记</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../benchmarks/ssb.html"><strong aria-hidden="true">1.1.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/index.html"><strong aria-hidden="true">3.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">3.1.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../../databases/kv/index.html"><strong aria-hidden="true">3.2.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">3.2.1.</strong> rocksdb cidr17</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/mmdb/index.html"><strong aria-hidden="true">3.3.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/mmdb/overview.html"><strong aria-hidden="true">3.3.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/oltp/index.html"><strong aria-hidden="true">3.4.</strong> oltp</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/oltp/oltp-through-the-looking-glass.html"><strong aria-hidden="true">3.4.1.</strong> through the looking glass</a></li><li class="chapter-item expanded "><a href="../../databases/oltp/staring-into-the-abyss.html"><strong aria-hidden="true">3.4.2.</strong> staring into the abyss</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/olap/index.html"><strong aria-hidden="true">3.5.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/olap/lakehouse.html"><strong aria-hidden="true">3.5.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../../databases/olap/delta-lake.html"><strong aria-hidden="true">3.5.2.</strong> delta lake</a></li><li class="chapter-item expanded "><a href="../../databases/olap/vertica.html"><strong aria-hidden="true">3.5.3.</strong> vertica</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/htap/index.html"><strong aria-hidden="true">3.6.</strong> htap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/htap/greenplum-htap.html"><strong aria-hidden="true">3.6.1.</strong> greenplum</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/concurrencycontrol/index.html"><strong aria-hidden="true">3.7.</strong> concurrency control</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/concurrencycontrol/empirical-evaluation-of-mvcc.html" class="active"><strong aria-hidden="true">3.7.1.</strong> evaluation of in-memory mvcc</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/cdc/index.html"><strong aria-hidden="true">3.8.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../databases/cdc/dblog.html"><strong aria-hidden="true">3.8.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../../databases/rum.html"><strong aria-hidden="true">3.9.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../datalayout/index.html"><strong aria-hidden="true">4.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datalayout/c-store.html"><strong aria-hidden="true">4.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../../datalayout/c-store-compression.html"><strong aria-hidden="true">4.2.</strong> cstore compression</a></li><li class="chapter-item expanded "><a href="../../datalayout/dremel.html"><strong aria-hidden="true">4.3.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../../datalayout/rcfile.html"><strong aria-hidden="true">4.4.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../../datalayout/orc.html"><strong aria-hidden="true">4.5.</strong> orc</a></li><li class="chapter-item expanded "><a href="../../datalayout/table-placement-methods.html"><strong aria-hidden="true">4.6.</strong> table placement methods</a></li></ol></li><li class="chapter-item expanded "><a href="../../datastructure/index.html"><strong aria-hidden="true">5.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../datastructure/skiplist.html"><strong aria-hidden="true">5.1.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../../datastructure/bloom-filter.html"><strong aria-hidden="true">5.2.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/index.html"><strong aria-hidden="true">6.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/index.html"><strong aria-hidden="true">6.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/flp.html"><strong aria-hidden="true">6.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">6.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">6.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/vr.html"><strong aria-hidden="true">6.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/zab.html"><strong aria-hidden="true">6.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">6.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/raft.html"><strong aria-hidden="true">6.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">6.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/index.html"><strong aria-hidden="true">6.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">6.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../../distributedsystem/primary-backup.html"><strong aria-hidden="true">6.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chain-replication.html"><strong aria-hidden="true">6.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/bolosky.html"><strong aria-hidden="true">6.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/holygrail.html"><strong aria-hidden="true">6.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/chandy.html"><strong aria-hidden="true">6.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/abs.html"><strong aria-hidden="true">6.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../../distributedsystem/zookeeper.html"><strong aria-hidden="true">6.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../../fs/index.html"><strong aria-hidden="true">7.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../fs/gfs.html"><strong aria-hidden="true">7.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../../fs/polarfs.html"><strong aria-hidden="true">7.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/index.html"><strong aria-hidden="true">8.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/index.html"><strong aria-hidden="true">8.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../storage/kv/dynamo.html"><strong aria-hidden="true">8.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../../storage/kudu.html"><strong aria-hidden="true">8.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../../storage/bluestore.html"><strong aria-hidden="true">8.3.</strong> bluestore</a></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/databases/concurrencycontrol/empirical-evaluation-of-mvcc.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="a-hrefassetspdfsempirical-evaluation-of-in-memory-mvccpdfan-empirical-evaluation-of-in-memory-multi-version-concurrency-controla"><a class="header" href="#a-hrefassetspdfsempirical-evaluation-of-in-memory-mvccpdfan-empirical-evaluation-of-in-memory-multi-version-concurrency-controla"><a href="../../assets/pdfs/empirical-evaluation-of-in-memory-mvcc.pdf">An Empirical Evaluation of In-Memory Multi-Version Concurrency Control</a></a></h3>
+<blockquote>
+<p>PVLDB, March 2017</p>
+<p>https://dl.acm.org/doi/10.14778/3067421.3067427</p>
+</blockquote>
+<p>MVCC 是现代 DBMSs 最流行的事务管理方式，它最早出现在 1979 年的一篇博士论文里，其基本思想是为数据库中的每个逻辑对象维护多个物理版本，以此来允许对同一逻辑对象的并行操作。这些对象可以是任意粒度，但通常 DBMSs 选择元组为 MVCC 的基本单元，以达到并行和版本追踪开销的平衡。</p>
+<p>虽然现在几乎所有最新的 DBMSs 都使用了 MVCC，但却没有一个<strong>标准</strong>的实现。</p>
+<blockquote>
+<p>Despite all these newer systems using MVCC, there is no one <strong>standard</strong>
+implementation. There are several design choices that have different 
+trade-offs and performance behaviors.</p>
+</blockquote>
+<p>本论文研究了 MVCC 数据库管理系统的四个关键事务管理设计上的决策:</p>
+<ol>
+<li>concurrency control protocol</li>
+<li>version storage</li>
+<li>garbage collection</li>
+<li>index management</li>
+</ol>
+<p>在以元组为对象的 MVCC 实现中，通常都会在每个物理版本的 header 中增加几个元数据来控制该版本的读写、加锁及可见性判断:</p>
+<pre><code> ----------------------------------------------------------------
+| txn-id | begin-ts | end-ts | pointer | ... |      columns      |
+ ----------------------------------------------------------------
+|&lt;----------------- header -----------------&gt;|&lt;---- Contents ---&gt;|
+</code></pre>
+<ul>
+<li><code>txn-id</code> field serves as the version's write lock</li>
+<li><code>begin-ts</code> and <code>end-ts</code> timestamps that represent the lifetime of the tuple version</li>
+<li><code>pointer</code> stores the address of the neighboring (previous or next) version (if any)</li>
+</ul>
+<p><em>不同的协议根据需要会增加额外的字段</em></p>
+<h3 id="concurrency-control-protocol"><a class="header" href="#concurrency-control-protocol">concurrency control protocol</a></h3>
+<p>并发控制协议决定了:</p>
+<ol>
+<li>一个事务是否可以在运行时访问或修改一个特定的对象版本</li>
+<li>是否允许一个事务提交它所作的修改</li>
+</ol>
+<h4 id="timestamp-ordering-mvto"><a class="header" href="#timestamp-ordering-mvto">Timestamp Ordering (MVTO)</a></h4>
+<p>该协议在 header 中增加了一个额外的字段 <code>read-ts</code>，用于记录读取该记录的最新事务。当一个事务想要修改一个物理记录（即创建一个新版本）时，需要满足两个条件:</p>
+<ol>
+<li>该版本上没有其它事务的写锁，通过 <code>txn-id</code> 是否为 0 进行判断</li>
+<li>事务的 Tid 要大于该版本的 <code>read-ts</code>，因为不能修改发生在未来的读取</li>
+</ol>
+<h4 id="optimistic-concurrency-control-mvocc"><a class="header" href="#optimistic-concurrency-control-mvocc">Optimistic Concurrency Control (MVOCC)</a></h4>
+<p>OCC 的一个假设是事务之间很少会发生冲突，因此在读取或更新元组时不需要进行加锁。</p>
+<p>MVOCC 将事务分为了三个阶段，read phase、validate phase 和 write phase。具体的算法描述感觉 paper 里描述的也不是很清楚，这里略过。</p>
+<h4 id="two-phase-locking-mv2pl"><a class="header" href="#two-phase-locking-mv2pl">Two-phase Locking (MV2PL)</a></h4>
+<p>每个事务在允许读取或修改一个物理版本之前都要加上必要的锁。在 disk-based DBMS 中，需要额外将锁信息保存在另外地方以保证不会被写入 disk，而内存数据库中则可以直接将锁信息保存在元组的 header 中。在 MV2PL 中，<code>txn-id</code> 用作 write lock，新增一个 <code>read-cnt</code> 作为 read lock。</p>
+<p>对于读，只需要判断 <code>txn-id</code> 为 0，然后对 <code>read-cnt</code> + 1 即可。</p>
+<p>对于写，则需要 <code>txn-id</code> 和 <code>read-cnt</code> 都为 0。</p>
+<h4 id="serialization-certifier"><a class="header" href="#serialization-certifier">Serialization Certifier</a></h4>
+<p>使用 SSI(Serializable Snapshot Isolation) 或 SSN(Serail Safety net) 可以避免 snapshot 隔离级别中的 write-skew anomalies。</p>
+<h3 id="version-storage"><a class="header" href="#version-storage">Version Storage</a></h3>
+<p>事务在更新记录的是否会产生新版本，根据新版本存放的位置、版本链的前后顺序以及是否保存元组的有所字段，将 version storage 进行以下分类:</p>
+<ul>
+<li>Append-only: 新版本与旧版本存储在相同的表结构中，且保存元组的所有字段
+<ul>
+<li>Oldest-to-Newest (O2N): version chain 的头指向旧版本，更新不需要修改 index，但会增加 pointer chasing 的时间且会污染 CPU cache</li>
+<li>Newest-to-Oldest (N20): version chain 的头指向新版本，更新需要修改所有 index (可通过增加一个中间层来解决此问题)，避免了大量 pointer chasing</li>
+</ul>
+</li>
+<li>Time-Travel: 新版本保存在原来的表结构，旧版本保存在分开的 time-travel 表，且保存所有字段</li>
+<li>Delta Storage: 新版本保存在原来的表结构中，被修改字段的旧数据保存在另外的 delta 存储中</li>
+</ul>
+<h3 id="gabage-collection"><a class="header" href="#gabage-collection">Gabage Collection</a></h3>
+<p>如果没有垃圾回收，会把存储空间耗尽且影响性能。现有垃圾回收的方式:</p>
+<ul>
+<li>Tuple-level GC
+<ul>
+<li>Background Vacuuming (VAC): 运行一个后台任务定时去检测是否有过期的数据</li>
+<li>Cooperative Cleaning: 在 pointer chasing 寻找可见版本的时候来识别过期数据，仅适用于 O2N，且有 <code>dusty corners</code> 的问题</li>
+</ul>
+</li>
+<li>Transaction-level GC: 在 epoch 结束的时候，所有属于那个 epoch 事务产生的版本都可以被删除</li>
+</ul>
+<h3 id="index-management"><a class="header" href="#index-management">Index Management</a></h3>
+<p>分为 Logical Pointers 和 Physical Pointers，其中 Logical Pointers 又可分为 Primary Key(Pkey) 和 Tuple Id(TupleId) 两种实现。</p>
+<p>最后给出论文中总结的不同 DBMSs 的 MVCC 实现决策表格:</p>
+<p><img src="../../assets/images/mvcc-evaluation-design-decisions.jpg" alt="design decisions" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../databases/concurrencycontrol/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../databases/cdc/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../databases/concurrencycontrol/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../databases/cdc/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
