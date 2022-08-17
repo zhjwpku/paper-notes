@@ -14,6 +14,8 @@
   - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
+- **[Concurrency Control](concurrencycontrol/index.html)**
+  - **[An Empirical Evaluation of In-Memory Multi-Version Concurrency Control][empirical-evaluation-of-mvcc]**
 - **[Change Data Capture](cdc/index.html)**
   - **[DBLog: AWatermark Based Change-Data-Capture Framework][dblog]**
 - **[Designing Access Methods: The RUM Conjecture][rum]**
@@ -34,3 +36,4 @@
 [rocksdb-cidr17]: kv/optimizing-space-amplification-in-rocksdb.md
 [lookingglass]: oltp/oltp-through-the-looking-glass.md
 [staring-abyss]: oltp/staring-into-the-abyss.md
+[empirical-evaluation-of-mvcc]: concurrencycontrol/empirical-evaluation-of-mvcc.md
