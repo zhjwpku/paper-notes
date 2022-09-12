@@ -24,6 +24,7 @@
 
 - M. Stonebraker, et al., [What Goes Around Comes Around](./../assets/pdfs/whatgoesaround-stonebraker.pdf)
 - A. Pavlo, et al., [What’s Really New with NewSQL?](../assets/pdfs/pavlo-newsql-sigmodrec2016.pdf)
+- Yihe Huang, et al., [Opportunities for Optimism in Contended MainMemory Multicore Transactions](../assets/pdfs/opportunities_for_optimism_in_contented_main-memory_multicore_transactions.pdf)
 
 [column-stores-vs-row-stores]: colum-stores-vs-row-stores.md
 [mmdb-overview]: mmdb/overview.md
