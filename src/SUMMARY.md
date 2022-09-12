@@ -37,6 +37,8 @@
   - [orc](./datalayout/orc.md)
   - [table placement methods](./datalayout/table-placement-methods.md)
 - [data structures](./datastructure/README.md)
+  - [btree family](./datastructure/btreefamily/README.md)
+    - [bw-tree](./datastructure/btreefamily/bw-tree.md)
   - [skip list](./datastructure/skiplist.md)
   - [bloom filter](./datastructure/bloom-filter.md)
 - [distributed system](./distributedsystem/README.md)
