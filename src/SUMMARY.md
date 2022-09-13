@@ -39,6 +39,7 @@
 - [data structures](./datastructure/README.md)
   - [btree family](./datastructure/btreefamily/README.md)
     - [bw-tree](./datastructure/btreefamily/bw-tree.md)
+  - [trie family](./datastructure/triefamily/README.md)
   - [skip list](./datastructure/skiplist.md)
   - [bloom filter](./datastructure/bloom-filter.md)
 - [distributed system](./distributedsystem/README.md)
