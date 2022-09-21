@@ -4,6 +4,10 @@
 
 
 
+#### Optional readings
+
+- V. Alvarez, et al., [A Comparison of Adaptive Radix Trees and Hash Tables](../../assets/pdfs/comparison-of-art-and-hash-tables-icde2015.pdf), in ICDE, 2015
+
 #### References
 
 - [Trie](https://en.wikipedia.org/wiki/Trie)
