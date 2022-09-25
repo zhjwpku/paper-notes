@@ -2,7 +2,7 @@
 
 前缀树或字典树，是一种有序树，其发明者 Edward Fredkin 把它读作/ˈtriː/ "tree"，但更多人把它读作/ˈtraɪ/ "try"。朴素的 Trie 由于存储稀疏，存在空间利用率低下的问题。Radix tree (又被称为 radix trie、压缩前缀树、compressed trie) 将作为唯一子节点的每个节点都与其父节点合并，是一种更节省空间的前缀树，[Rax](https://github.com/antirez/rax) 是一个 Radix tree 的 C 语言实现。
 
-
+- **[The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases][art]**
 
 #### Optional readings
 
@@ -13,3 +13,5 @@
 - [Trie](https://en.wikipedia.org/wiki/Trie)
 - [Radix tree](https://en.wikipedia.org/wiki/Radix_tree)
 - [Trees I: Radix trees](https://lwn.net/Articles/175432/) by J. Corbert, 2006
+
+[art]: art.md
