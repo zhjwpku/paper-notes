@@ -12,3 +12,4 @@
 
 - [Trie](https://en.wikipedia.org/wiki/Trie)
 - [Radix tree](https://en.wikipedia.org/wiki/Radix_tree)
+- [Trees I: Radix trees](https://lwn.net/Articles/175432/) by J. Corbert, 2006
