@@ -39,6 +39,8 @@
 - [data structures](./datastructure/README.md)
   - [btree family](./datastructure/btreefamily/README.md)
     - [bw-tree](./datastructure/btreefamily/bw-tree.md)
+  - [hash table](./datastructure/hash/README.md)
+    - [linear hashing](./datastructure/hash/linear-hashing.md)
   - [trie family](./datastructure/triefamily/README.md)
     - [art](./datastructure/triefamily/art.md)
   - [skip list](./datastructure/skiplist.md)
