@@ -43,6 +43,7 @@
     - [linear hashing](./datastructure/hash/linear-hashing.md)
   - [trie family](./datastructure/triefamily/README.md)
     - [art](./datastructure/triefamily/art.md)
+    - [hot](./datastructure/triefamily/hot.md)
   - [skip list](./datastructure/skiplist.md)
   - [bloom filter](./datastructure/bloom-filter.md)
 - [distributed system](./distributedsystem/README.md)
