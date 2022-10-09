@@ -20,7 +20,7 @@
 
 一个 table placement method 的基本结构包含三个部分:
 
-```
+```txt
 1. a row reordering procedure       fRR
 2. a table partitioning procedure   fTP
 3. a data packing procedure         fDP

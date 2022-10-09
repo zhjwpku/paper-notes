@@ -27,7 +27,7 @@
 
 上图的 hash table 扩展之前的状态为 L=0, p=0，使用 hL+1(K) 将 p 指向的 bucket 进行分裂，然后使用如下公式更新 L 和 p 值：
 
-```
+```txt
 p := p + 1;
 if p = N x 2^L then begin
     L := L + 1;
@@ -37,7 +37,7 @@ end;
 
 在查找一个 K 时，定位其所在 bucket 使用的公式为：
 
-```
+```txt
 addr := hL(K);
 if addr < p then addr := hL+1(K);
 ```
