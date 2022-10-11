@@ -8,6 +8,7 @@
 #### Optional readings
 
 - V. Alvarez, et al., [A Comparison of Adaptive Radix Trees and Hash Tables](../../assets/pdfs/comparison-of-art-and-hash-tables-icde2015.pdf), in ICDE, 2015
+- Viktor Leis, et al., [The ART of Practical Synchronization](../../assets/pdfs/the-art-of-practical-synchronization-damon2016.pdf), DaMoN '16. 介绍了 ART 实现中使用的两种多线程同步技术 — 1) OPTIMISTIC LOCK COUPLING 2) READ-OPTIMIZED WRITE EXCLUSION (ROWEX)
 
 #### References
 
