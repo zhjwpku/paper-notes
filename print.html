@@ -1066,7 +1066,7 @@ trade-offs and performance behaviors.</p>
 <li>index management</li>
 </ol>
 <p>在以元组为对象的 MVCC 实现中，通常都会在每个物理版本的 header 中增加几个元数据来控制该版本的读写、加锁及可见性判断:</p>
-<pre><code> ----------------------------------------------------------------
+<pre><code class="language-txt"> ----------------------------------------------------------------
 | txn-id | begin-ts | end-ts | pointer | ... |      columns      |
  ----------------------------------------------------------------
 |&lt;----------------- header -----------------&gt;|&lt;---- Contents ---&gt;|
@@ -1646,7 +1646,7 @@ separately, and flushes compressed column holders into one row group in the unde
 <li>全面研究了 table placement method 相关的数据读取问题，并提供了如何通过调整 table placement method 来达到优化 I/O 读取的指南</li>
 </ol>
 <p>一个 table placement method 的基本结构包含三个部分:</p>
-<pre><code>1. a row reordering procedure       fRR
+<pre><code class="language-txt">1. a row reordering procedure       fRR
 2. a table partitioning procedure   fTP
 3. a data packing procedure         fDP
 </code></pre>
@@ -1775,14 +1775,14 @@ the location change be propagated to the root of the tree.</p>
 <p>其中 g(K) 可以为任意可以打散数据的哈希函数。一个例子：</p>
 <p><img src="datastructure/hash/../../assets/images/dynamic_hash_tables_linear_hashing_splitting.jpg" alt="splitting example" /></p>
 <p>上图的 hash table 扩展之前的状态为 L=0, p=0，使用 hL+1(K) 将 p 指向的 bucket 进行分裂，然后使用如下公式更新 L 和 p 值：</p>
-<pre><code>p := p + 1;
+<pre><code class="language-txt">p := p + 1;
 if p = N x 2^L then begin
     L := L + 1;
     p := 0;
 end;
 </code></pre>
 <p>在查找一个 K 时，定位其所在 bucket 使用的公式为：</p>
-<pre><code>addr := hL(K);
+<pre><code class="language-txt">addr := hL(K);
 if addr &lt; p then addr := hL+1(K);
 </code></pre>
 <h4 id="spiral-storage"><a class="header" href="#spiral-storage">Spiral storage</a></h4>
@@ -1804,6 +1804,7 @@ linear hashing gives the best overall performance.</p>
 <h4 id="optional-readings-2"><a class="header" href="#optional-readings-2">Optional readings</a></h4>
 <ul>
 <li>V. Alvarez, et al., <a href="datastructure/triefamily/../../assets/pdfs/comparison-of-art-and-hash-tables-icde2015.pdf">A Comparison of Adaptive Radix Trees and Hash Tables</a>, in ICDE, 2015</li>
+<li>Viktor Leis, et al., <a href="datastructure/triefamily/../../assets/pdfs/the-art-of-practical-synchronization-damon2016.pdf">The ART of Practical Synchronization</a>, DaMoN '16. 介绍了 ART 实现中使用的两种多线程同步技术 — 1) OPTIMISTIC LOCK COUPLING 2) READ-OPTIMIZED WRITE EXCLUSION (ROWEX)</li>
 </ul>
 <h4 id="references-3"><a class="header" href="#references-3">References</a></h4>
 <ul>
