@@ -10,7 +10,6 @@ I have changed this repo to a mdBook, run `mdbook serve` to read the notes local
   - [目录(TOC)](#目录toc)
   - [数据结构(Data Structure)](#数据结构data-structure)
     - [BTree](#btree)
-      - [**Organization and Maintenance of Large Ordered Indices**](#organization-and-maintenance-of-large-ordered-indices)
       - [**The Ubiquitous B-Tree**](#the-ubiquitous-b-tree)
     - [LSMTree](#lsmtree)
       - [**The Log-Structured Merge-Tree**](#the-log-structured-merge-tree)
@@ -24,12 +23,6 @@ I have changed this repo to a mdBook, run `mdbook serve` to read the notes local
 ## 数据结构(Data Structure)
 
 ### BTree
-
-#### **[Organization and Maintenance of Large Ordered Indices](https://infolab.usc.edu/csci585/Spring2010/den_ar/indexing.pdf)**
-
-B-tree 是由 Rudolf Bayer 和 Edward M. McCreight 在 1970 年发明的、适用于读取较大数据块（如 disk）的一种数据结构，广泛应用于数据库和文件系统作为索引（index）层。
-
-B-tree 可以在插入或删除的时候一直保持树的平衡，当产生 underflow(due to deletion) 或 overflow(due to insertion) 时，可通过与邻居节点重重排数据来减少合并或分离的次数。[B-Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html) 提供了可视化的 B-tree 操作接口，try it。
 
 #### **[The Ubiquitous B-Tree](http://carlosproal.com/ir/papers/p121-comer.pdf)**
 
