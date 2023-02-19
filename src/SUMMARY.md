@@ -44,6 +44,8 @@
   - [trie family](./datastructure/triefamily/README.md)
     - [art](./datastructure/triefamily/art.md)
     - [hot](./datastructure/triefamily/hot.md)
+  - [bitmaps](./datastructure/bitmap/README.md)
+    - [roaring bitmaps](./datastructure/bitmap/roaring.md)
   - [skip list](./datastructure/skiplist.md)
   - [bloom filter](./datastructure/bloom-filter.md)
 - [distributed system](./distributedsystem/README.md)
