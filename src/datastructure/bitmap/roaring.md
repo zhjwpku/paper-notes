@@ -20,7 +20,14 @@ Roaring bitmap 将 32-bit 的索引（[0,n)） 进行分区，每个 chunk 代�
 
 ![figure 1](../../assets/images/roaring-bitmap-figure-1.jpg)
 
-该结构的存取操作和逻辑操作涉及到两种容器之间的转换，算法并不复杂，但有很多可以优化的点，详见论文。
+Paper 中有一个 typo：
+
+> We assume that there are far fewer containers than integers. More precisely, 
+> we assume that the density typically exceeds 0.1% or that n/|S| > 0.001.
+
+应该为 |S|/n > 0.001。
+
+roaring bitmap 的存取操作和逻辑操作涉及到两种容器之间的转换，算法并不复杂，但有很多可以优化的点，详见论文。
 
 #### References:
 
