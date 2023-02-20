@@ -1940,7 +1940,13 @@ node.</p>
 </blockquote>
 <p>容器存储在一个动态变化的有序数组中，根据容器的高 16 位排序，作为 roaring bitmap 的一级索引。当 n = 1000 000 时，一级索引只需保存 16 个 entries，这使得该结构可以常驻在 CPU 缓存。一个简单的例子如下图：</p>
 <p><img src="datastructure/bitmap/../../assets/images/roaring-bitmap-figure-1.jpg" alt="figure 1" /></p>
-<p>该结构的存取操作和逻辑操作涉及到两种容器之间的转换，算法并不复杂，但有很多可以优化的点，详见论文。</p>
+<p>Paper 中有一个 typo：</p>
+<blockquote>
+<p>We assume that there are far fewer containers than integers. More precisely, 
+we assume that the density typically exceeds 0.1% or that n/|S| &gt; 0.001.</p>
+</blockquote>
+<p>应该为 |S|/n &gt; 0.001。</p>
+<p>roaring bitmap 的存取操作和逻辑操作涉及到两种容器之间的转换，算法并不复杂，但有很多可以优化的点，详见论文。</p>
 <h4 id="references-4"><a class="header" href="#references-4">References:</a></h4>
 <p>[1] <a href="https://www.youtube.com/watch?v=ubykHUyNi_0">Engineering Fast Indexes for Big Data Applications</a><br>
 [2] <a href="https://www.youtube.com/watch?v=1QMgGxiCFWE">Engineering Fast Indexes for Big Data Applications(deep dive)</a><br>
