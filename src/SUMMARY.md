@@ -24,6 +24,7 @@
     - [vertica](./databases/olap/vertica.md)
   - [htap](./databases/htap/README.md)
     - [greenplum](./databases/htap/greenplum-htap.md)
+  - [optimizer](./databases/optimizer/README.md)
   - [concurrency control](./databases/concurrencycontrol/README.md)
     - [evaluation of in-memory mvcc](./databases/concurrencycontrol/empirical-evaluation-of-mvcc.md)
   - [cdc](./databases/cdc/README.md)
