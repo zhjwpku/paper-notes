@@ -14,6 +14,9 @@
   - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
+- **[Optimizer](optimizer/index.html)**
+- **[Executor](executor/index.html)**
+  - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
 - **[Concurrency Control](concurrencycontrol/index.html)**
   - **[An Empirical Evaluation of In-Memory Multi-Version Concurrency Control][empirical-evaluation-of-mvcc]**
 - **[Change Data Capture](cdc/index.html)**
@@ -38,3 +41,4 @@
 [lookingglass]: oltp/oltp-through-the-looking-glass.md
 [staring-abyss]: oltp/staring-into-the-abyss.md
 [empirical-evaluation-of-mvcc]: concurrencycontrol/empirical-evaluation-of-mvcc.md
+[volcano]: executor/volcano.md
