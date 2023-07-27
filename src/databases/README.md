@@ -14,6 +14,7 @@
   - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
+- **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
 - **[Executor](executor/index.html)**
   - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
@@ -42,3 +43,4 @@
 [staring-abyss]: oltp/staring-into-the-abyss.md
 [empirical-evaluation-of-mvcc]: concurrencycontrol/empirical-evaluation-of-mvcc.md
 [volcano]: executor/volcano.md
+[citus]: citus.md
