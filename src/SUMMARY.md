@@ -24,6 +24,7 @@
     - [vertica](./databases/olap/vertica.md)
   - [htap](./databases/htap/README.md)
     - [greenplum](./databases/htap/greenplum-htap.md)
+  - [vector db](./databases/vectordb/README.md)
   - [citus](./databases/citus.md)
   - [optimizer](./databases/optimizer/README.md)
   - [executor](./databases/executor/README.md)

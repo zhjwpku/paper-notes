@@ -14,6 +14,7 @@
   - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
+- **[Vector DB](vectordb/index.html)**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
 - **[Executor](executor/index.html)**
