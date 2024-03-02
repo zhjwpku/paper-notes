@@ -7,3 +7,4 @@
 ### Misc
 
 - [THE FAISS LIBRARY](/assets/pdfs/The_FAISS_LIBRARY_2401.08281.pdf), 2024
+- [Faiss: The Missing Manual](https://www.pinecone.io/learn/series/faiss/)
