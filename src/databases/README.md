@@ -15,6 +15,7 @@
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Vector DB](vectordb/index.html)**
+  - **[Hierarchical NSW][hnsw]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
 - **[Executor](executor/index.html)**
@@ -45,3 +46,4 @@
 [empirical-evaluation-of-mvcc]: concurrencycontrol/empirical-evaluation-of-mvcc.md
 [volcano]: executor/volcano.md
 [citus]: citus.md
+[hnsw]: vectordb/hnsw.md
