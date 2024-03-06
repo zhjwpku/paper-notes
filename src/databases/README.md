@@ -16,6 +16,7 @@
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Vector DB](vectordb/index.html)**
   - **[Hierarchical NSW][hnsw]**
+  - **[Product Quantization][pq]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
 - **[Executor](executor/index.html)**
@@ -47,3 +48,4 @@
 [volcano]: executor/volcano.md
 [citus]: citus.md
 [hnsw]: vectordb/hnsw.md
+[pq]: vectordb/pq.md

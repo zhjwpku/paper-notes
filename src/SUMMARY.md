@@ -26,6 +26,7 @@
     - [greenplum](./databases/htap/greenplum-htap.md)
   - [vector db](./databases/vectordb/README.md)
     - [hnsw](./databases/vectordb/hnsw.md)
+    - [product quantization](./databases/vectordb/pq.md)
   - [citus](./databases/citus.md)
   - [optimizer](./databases/optimizer/README.md)
   - [executor](./databases/executor/README.md)

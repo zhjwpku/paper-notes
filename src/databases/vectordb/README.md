@@ -13,6 +13,7 @@
 
 ### Quantization
 
+- [Product Quantization for Nearest Neighbor Search][pq], 2010
 - [A Survey of Quantization Methods for Efficient Neural Network Inference](/assets/pdfs/A_Survey_of_Quantization_Methods_for_Efficient_Neural_Network_Inference.pdf), 2021
 
 ### Misc
@@ -22,3 +23,4 @@
 
 
 [hnsw]: hnsw.md
+[pq]: pq.md
