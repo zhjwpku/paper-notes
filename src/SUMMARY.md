@@ -78,6 +78,7 @@
 - [filesystem](./fs/README.md)
   - [gfs](./fs/gfs.md)
   - [polarfs](./fs/polarfs.md)
+- [llm](./llm/README.md)
 - [storage](./storage/README.md)
   - [kv store](./storage/kv/README.md)
     - [dynamo](./storage/kv/dynamo.md)
