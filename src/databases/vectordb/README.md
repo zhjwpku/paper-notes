@@ -6,6 +6,10 @@
 
 > The goal of an ANN algorithm then is to **maximize recall** while retrieving the results as quickly as possible, which results in the **recall-vs-latency tradeoff**.
 
+### Vector databases
+
+- [Manu: A Cloud Native Vector Database Management System](/assets/pdfs/manu_2206.13843.pdf), 2022
+
 ### Graph Index
 
 - [Approximate nearest neighbor algorithm based on navigable small world graphs](/assets/pdfs/Approximatenearest_neighbor_algorithm_based_on_navigable_small_world_graphs.pdf), 2014
