@@ -10,6 +10,7 @@
 
 - [Milvus: A Purpose-Built Vector Data Management System](/assets/pdfs/SIGMOD21_Milvus.pdf), SIGMOD '21
 - [Manu: A Cloud Native Vector Database Management System](/assets/pdfs/manu_2206.13843.pdf), 2022
+- [VBASE: Unifying Online Vector Similarity Search and Relational Queries via Relaxed Monotonicity](/assets/pdfs/vbase-osdi23.pdf), OSDI 2023 [codebase](https://github.com/microsoft/MSVBASE)
 
 ### Graph Index
 
