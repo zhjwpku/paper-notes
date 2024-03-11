@@ -17,6 +17,7 @@
 - [Approximate nearest neighbor algorithm based on navigable small world graphs](/assets/pdfs/Approximatenearest_neighbor_algorithm_based_on_navigable_small_world_graphs.pdf), 2014
 - [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs][hnsw], 2016
 - [Revisiting the Inverted Indices for Billion-Scale Approximate Nearest Neighbors][ivf-hnsw], 2018
+- [FINGER: Fast Inference for Graph-based Approximate Nearest Neighbor Search][hnsw-finger], 2022 [HNSW-FINGER Explained!](https://www.youtube.com/watch?v=OsxZG2XfcZA)
 
 ### Quantization
 
@@ -32,3 +33,4 @@
 [hnsw]: hnsw.md
 [pq]: pq.md
 [ivf-hnsw]: ivf-hnsw.md
+[hnsw-finger]: https://arxiv.org/abs/2206.11408
