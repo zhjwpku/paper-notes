@@ -8,6 +8,7 @@
 
 ### Vector databases
 
+- [Milvus: A Purpose-Built Vector Data Management System](/assets/pdfs/SIGMOD21_Milvus.pdf), SIGMOD '21
 - [Manu: A Cloud Native Vector Database Management System](/assets/pdfs/manu_2206.13843.pdf), 2022
 
 ### Graph Index
