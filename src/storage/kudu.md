@@ -6,7 +6,7 @@
 
 Kudu 是一个开源的结构化的存储引擎，它可用于低延迟的随机访问及高效的分析访问模型。Kudu 的设计填补了『高吞吐顺序访问』和『低延迟随机访问』两种访问模式不可兼得的空缺。
 
-> Kudu o ers a "happy medium" alternative that can dramatically simplify the architecture of 
+> Kudu offers a "happy medium" alternative that can dramatically simplify the architecture of 
 > many common workloads. In particular, Kudu offers a simple API for row-level inserts, 
 > updates, and deletes, while **providing table scans at throughputs similar to Parquet**, 
 > a commonly-used columnar format for static data.
