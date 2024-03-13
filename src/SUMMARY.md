@@ -13,6 +13,7 @@
   - [columnstores vs rowstores](./databases/column-stores-vs-row-stores.md)
   - [kv](./databases/kv/README.md)
     - [rocksdb cidr17](./databases/kv/optimizing-space-amplification-in-rocksdb.md)
+    - [wisckey](./databases/kv/wisckey.md)
   - [mmdb](./databases/mmdb/README.md)
     - [mmdb overview](./databases/mmdb/overview.md)
   - [oltp](./databases/oltp/README.md)
