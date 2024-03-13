@@ -18,6 +18,10 @@
 - [IndexHNSW from faiss](https://github.com/facebookresearch/faiss/blob/main/faiss/IndexHNSW.cpp)
 - [pgvector](https://github.com/pgvector/pgvector)
 
+hnswlib 的内存 layout 如下，可以帮助理解 hnswlib 的代码:
+
+![hnswlib layout](/assets/images/hnswlib_layout.png)
+
 #### References:
 
 - [Graph-Based Approximate Nearest Neighbors (ANN) and HNSW](https://www.youtube.com/watch?v=4PsyNdFlxmk)
