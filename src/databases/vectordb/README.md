@@ -28,6 +28,7 @@
 
 - [THE FAISS LIBRARY](/assets/pdfs/The_FAISS_LIBRARY_2401.08281.pdf), 2024
 - [Faiss: The Missing Manual](https://www.pinecone.io/learn/series/faiss/)
+- [Cosine similarity = dot product for normalized vectors](https://zhang-yang.medium.com/cosine-similarity-dot-product-for-normalized-vectors-c07bdb61c9d1)
 
 
 [hnsw]: hnsw.md
