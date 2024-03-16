@@ -1,4 +1,4 @@
-### [Revisiting the Inverted Indices for Billion-Scale Approximate Nearest Neighbors](/assets/pdfs/hnsw_1603.09320.pdf)
+### [Revisiting the Inverted Indices for Billion-Scale Approximate Nearest Neighbors](/assets/pdfs/ivf-hnsw_1802.02422.pdf)
 
 > https://arxiv.org/abs/1802.02422
 
