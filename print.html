@@ -745,6 +745,10 @@ can be over 50 (10 for each gap between L1 to L6).</p>
 files in the LSM-tree and a significant portion of the LSM-tree can be easily <strong>cached in memory</strong>.</p>
 </blockquote>
 <p>当然 k/v 分离也带来了一些挑战，最直观的挑战是当写入随机的键值对，然后进行 Range Query，导致查询到的 value 分布在 log file 的不同位置，文章提出用并发读来提高带宽。作者对其它挑战（ Garbage Collection &amp; ）也都提出了相应的解决方案，感兴趣的读者请阅读论文。</p>
+<h4 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h4>
+<ul>
+<li><a href="databases/kv//assets/pdfs/hashkv-atc18.pdf">HashKV: Enabling Efficient Updates in KV Storage via Hashing</a>, 2018. Section 2.2 对 WiscKey 的介绍值得一读</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="main-memory-database-systems"><a class="header" href="#main-memory-database-systems">Main Memory Database Systems</a></h2>
 <ul>
 <li><strong><a href="databases/mmdb/overview.html">Main Memory Database Systems: An Overview</a></strong></li>
@@ -1558,7 +1562,7 @@ and memory overheads, also sets a lower bound for the third overhead.</p>
 <li><strong><a href="datalayout/orc.html">Major Technical Advancements in Apache Hive</a></strong></li>
 <li><strong><a href="datalayout/table-placement-methods.html">Table Placement Methods</a></strong></li>
 </ul>
-<h4 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h4>
+<h4 id="further-readings-1"><a class="header" href="#further-readings-1">Further readings</a></h4>
 <p>[1] <a href="http://dbmsmusings.blogspot.com/2017/10/apache-arrow-vs-parquet-and-orc-do-we.html">Apache Arrow vs. Parquet and ORC: Do we really need a third Apache project for columnar data representation?</a> by Daniel Abadi, 2017<br></p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="a-hrefdatalayoutassetspdfscstore-vldb05pdfc-store-a-column-oriented-dbmsa"><a class="header" href="#a-hrefdatalayoutassetspdfscstore-vldb05pdfc-store-a-column-oriented-dbmsa"><a href="datalayout/../assets/pdfs/cstore-vldb05.pdf">C-Store: A Column-oriented DBMS</a></a></h3>
 <blockquote>
@@ -2439,7 +2443,7 @@ accepted. If any of these bits is zero, the message is rejected.</p>
 <li><strong><a href="distributedsystem/consensus/raft.html">In Search of an Understandable Consensus Algorithm</a></strong></li>
 <li><strong><a href="distributedsystem/consensus/paxos-vs-raft.html">Paxos vs Raft: have we reached consensus on distributed consensus?</a></strong></li>
 </ul>
-<h4 id="further-readings-1"><a class="header" href="#further-readings-1">Further readings</a></h4>
+<h4 id="further-readings-2"><a class="header" href="#further-readings-2">Further readings</a></h4>
 <p>[1] <a href="distributedsystem/consensus/../../assets/pdfs/disk-paxos.pdf">Disk Paxos</a> by Eli Gafni &amp; Leslie Lamport, 2002<br>
 [2] <a href="distributedsystem/consensus/../../assets/pdfs/paxos-abcd.pdf">The ABCD’s of Paxos</a> by Butler W. Lampson, PODC 2001<br>
 [3] Paxos for System Builders: <a href="distributedsystem/consensus/../../assets/pdfs/paxos-for-system-builders-an-overview.pdf">An Overview</a> and <a href="distributedsystem/consensus/../../assets/pdfs/paxos_for_system_builders.pdf">The Complete Specification</a> by Yair Amir and Jonathan Kirsch, 2008<br>
@@ -3121,7 +3125,7 @@ where the server (the state machine) runs on a fault-tolerant, replicated system
 <p>由于相对较难理解，还没深入看 :()</p>
 <h4 id="detecting-behavioral-patterns"><a class="header" href="#detecting-behavioral-patterns">Detecting Behavioral Patterns</a></h4>
 <p>由于相对较难理解，还没深入看 :()</p>
-<h4 id="further-readings-2"><a class="header" href="#further-readings-2">Further readings</a></h4>
+<h4 id="further-readings-3"><a class="header" href="#further-readings-3">Further readings</a></h4>
 <p>[1] <a href="https://fileadmin.cs.lth.se/cs/Personal/Amr_Ergawy/dist-algos-papers/4.pdf">Timestamps in Message-Passing Systems That Preserve the Partial Ordering</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="a-hrefdistributedsystemassetspdfschandypdfdistributed-snapshots-determining-global-states-of-distributed-systemsa"><a class="header" href="#a-hrefdistributedsystemassetspdfschandypdfdistributed-snapshots-determining-global-states-of-distributed-systemsa"><a href="distributedsystem/../assets/pdfs/chandy.pdf">Distributed Snapshots: Determining Global States of Distributed Systems</a></a></h3>
 <blockquote>

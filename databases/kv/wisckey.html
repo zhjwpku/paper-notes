@@ -203,6 +203,10 @@ can be over 50 (10 for each gap between L1 to L6).</p>
 files in the LSM-tree and a significant portion of the LSM-tree can be easily <strong>cached in memory</strong>.</p>
 </blockquote>
 <p>当然 k/v 分离也带来了一些挑战，最直观的挑战是当写入随机的键值对，然后进行 Range Query，导致查询到的 value 分布在 log file 的不同位置，文章提出用并发读来提高带宽。作者对其它挑战（ Garbage Collection &amp; ）也都提出了相应的解决方案，感兴趣的读者请阅读论文。</p>
+<h4 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h4>
+<ul>
+<li><a href="/assets/pdfs/hashkv-atc18.pdf">HashKV: Enabling Efficient Updates in KV Storage via Hashing</a>, 2018. Section 2.2 对 WiscKey 的介绍值得一读</li>
+</ul>
 
                     </main>
 
