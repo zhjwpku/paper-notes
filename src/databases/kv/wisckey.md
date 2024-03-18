@@ -56,3 +56,8 @@ WiscKey 包含四个关键的设计要点:
 > files in the LSM-tree and a significant portion of the LSM-tree can be easily **cached in memory**.
 
 当然 k/v 分离也带来了一些挑战，最直观的挑战是当写入随机的键值对，然后进行 Range Query，导致查询到的 value 分布在 log file 的不同位置，文章提出用并发读来提高带宽。作者对其它挑战（ Garbage Collection & ）也都提出了相应的解决方案，感兴趣的读者请阅读论文。
+
+
+#### Further readings
+
+- [HashKV: Enabling Efficient Updates in KV Storage via Hashing](/assets/pdfs/hashkv-atc18.pdf), 2018. Section 2.2 对 WiscKey 的介绍值得一读
