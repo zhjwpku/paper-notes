@@ -4,6 +4,11 @@
 - **[Evolution of Development Priorities in Key-value Stores Serving Large-scale Applications: The RocksDB Experience][fast21-dong], 2021 [a slightly more detailed version](/assets/pdfs/rocksdb-evolution-2021.pdf)**
 - **[WiscKey: Separating Keys from Values in SSD-Conscious Storage][wisckey], 2016**
 
+### Further readings
+
+- [LDC: A Lower-Level Driven Compaction Method to Optimize SSD-Oriented Key-Value Stores][ldc], 2019
+
 [rocksdb-cidr17]: optimizing-space-amplification-in-rocksdb.md
 [fast21-dong]: /assets/pdfs/fast21-dong.pdf
 [wisckey]: wisckey.md
+[ldc]: /assets/pdfs/lower-level-driven-compaction.pdf
