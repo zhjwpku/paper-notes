@@ -6,9 +6,11 @@
 
 ### Further readings
 
+- [Pipelined Compaction for the LSM-tree][pcp], 2014
 - [LDC: A Lower-Level Driven Compaction Method to Optimize SSD-Oriented Key-Value Stores][ldc], 2019
 
 [rocksdb-cidr17]: optimizing-space-amplification-in-rocksdb.md
 [fast21-dong]: /assets/pdfs/fast21-dong.pdf
 [wisckey]: wisckey.md
 [ldc]: /assets/pdfs/lower-level-driven-compaction.pdf
+[pcp]: /assets/pdfs/pcp_pipelined_compaction_for_lsm_tree.pdf
