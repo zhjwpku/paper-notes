@@ -7,7 +7,9 @@
 ### Further readings
 
 - [Pipelined Compaction for the LSM-tree][pcp], 2014
+- [HashKV: Enabling Efficient Updates in KV Storage via Hashing](/assets/pdfs/hashkv-atc18.pdf), 2018
 - [Dostoevsky: Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores via Adaptive Removal of Superfluous Merging][dostoevskykv], 2018, [video](https://www.youtube.com/watch?v=fmXgXripmh0)
+- [Accordion: better memory organization for LSM key-value stores][accordion], 2018, HBase Memory Improvement
 - [LDC: A Lower-Level Driven Compaction Method to Optimize SSD-Oriented Key-Value Stores][ldc], 2019
 
 [rocksdb-cidr17]: optimizing-space-amplification-in-rocksdb.md
@@ -16,3 +18,4 @@
 [ldc]: /assets/pdfs/lower-level-driven-compaction.pdf
 [pcp]: /assets/pdfs/pcp_pipelined_compaction_for_lsm_tree.pdf
 [dostoevskykv]: https://scholar.harvard.edu/files/stratos/files/dostoevskykv.pdf
+[accordion]: https://dl.acm.org/doi/abs/10.14778/3229863.3229873
