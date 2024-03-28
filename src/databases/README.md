@@ -17,7 +17,8 @@
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Vector DB](vectordb/index.html)**
   - **[Hierarchical NSW][hnsw]**
-  - **[IVF-HNSW][[ivf-hnsw]]**
+  - **[IVF-HNSW][ivf-hnsw]**
+  - **[DiskANN][diskann]**
   - **[Product Quantization][pq]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
@@ -53,3 +54,4 @@
 [pq]: vectordb/pq.md
 [ivf-hnsw]: vectordb/ivf-hnsw.md
 [wisckey]: kv/wisckey.md
+[diskann]: vectordb/diskann.md
