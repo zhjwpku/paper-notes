@@ -30,7 +30,12 @@
 - [THE FAISS LIBRARY](/assets/pdfs/The_FAISS_LIBRARY_2401.08281.pdf), 2024
 - [Faiss: The Missing Manual](https://www.pinecone.io/learn/series/faiss/)
 - [Cosine similarity = dot product for normalized vectors](https://zhang-yang.medium.com/cosine-similarity-dot-product-for-normalized-vectors-c07bdb61c9d1)
-
+- [USearch: Smaller and faster single-file vector search engine](https://news.ycombinator.com/item?id=36942993)
+- [Annoy(Approximate Nearest Neighbors Oh Yeah)](https://github.com/spotify/annoy)
+- [RAPIDS RAFT library](https://github.com/rapidsai/raft)
+- [Accelerating Vector Search: Using GPU-Powered Indexes with RAPIDS RAFT](https://developer.nvidia.com/blog/accelerating-vector-search-using-gpu-powered-indexes-with-rapids-raft/)
+- [Accelerating Vector Search: Fine-Tuning GPU Index Algorithms](https://developer.nvidia.com/blog/accelerating-vector-search-fine-tuning-gpu-index-algorithms/)
+- [Accelerated Vector Search: Approximating with RAPIDS RAFT IVF-Flat](https://developer.nvidia.com/blog/accelerated-vector-search-approximating-with-rapids-raft-ivf-flat/)
 
 [hnsw]: hnsw.md
 [pq]: pq.md
