@@ -47,4 +47,5 @@ PQ 是一种压缩算法，如果需要更快的检索速度，需要搭配一�
 #### References:
 
 - [Product Quantization: Compressing high-dimensional vectors by 97%](https://www.pinecone.io/learn/series/faiss/product-quantization/)
-
+- [Product Quantizers for k-NN Tutorial Part 1](https://mccormickml.com/2017/10/13/product-quantizer-tutorial-part-1/)
+- [Product Quantizers for k-NN Tutorial Part 2](https://mccormickml.com/2017/10/22/product-quantizer-tutorial-part-2/)
