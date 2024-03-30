@@ -44,6 +44,7 @@ DiskANN 通过 BeamSearch(设置 beamwidth 一次读多个数据块) 和缓存�
 
 - [FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search](/assets/pdfs/FreshDiskANN_2021.pdf), 2021
 - [OOD-DiskANN: Efficient and Scalable Graph ANNS for Out-of-Distribution Queries](/assets/pdfs/OOD-DiskANN-2022.pdf), 2022
+- [Filtered−DiskANN: Graph Algorithms for Approximate Nearest Neighbor Search with Filters](/assets/pdfs/Filtered-DiskANN_2023.pdf), 2023
 
 #### References:
 
