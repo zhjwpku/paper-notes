@@ -37,6 +37,7 @@
 - [Accelerating Vector Search: Fine-Tuning GPU Index Algorithms](https://developer.nvidia.com/blog/accelerating-vector-search-fine-tuning-gpu-index-algorithms/)
 - [Accelerated Vector Search: Approximating with RAPIDS RAFT IVF-Flat](https://developer.nvidia.com/blog/accelerated-vector-search-approximating-with-rapids-raft-ivf-flat/)
 - [Semantic Search: Measuring Meaning From Jaccard to Bert](https://www.pinecone.io/learn/semantic-search/)
+- [SPLADE for Sparse Vector Search Explain](https://www.pinecone.io/learn/splade/)
 - [Unlock Advanced Recommendation Engines with Milvus' New Range Search](https://zilliz.com/blog/unlock-advanced-recommendation-engines-with-milvus-new-range-search)
 
 [hnsw]: hnsw.md
