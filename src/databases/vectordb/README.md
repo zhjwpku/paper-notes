@@ -38,6 +38,7 @@
 - [Accelerated Vector Search: Approximating with RAPIDS RAFT IVF-Flat](https://developer.nvidia.com/blog/accelerated-vector-search-approximating-with-rapids-raft-ivf-flat/)
 - [Semantic Search: Measuring Meaning From Jaccard to Bert](https://www.pinecone.io/learn/semantic-search/)
 - [SPLADE for Sparse Vector Search Explain](https://www.pinecone.io/learn/splade/)
+- [Sparse embedding or BM25?](https://medium.com/@infiniflowai/sparse-embedding-or-bm25-84c942b3eda7)
 - [Unlock Advanced Recommendation Engines with Milvus' New Range Search](https://zilliz.com/blog/unlock-advanced-recommendation-engines-with-milvus-new-range-search)
 
 [hnsw]: hnsw.md
