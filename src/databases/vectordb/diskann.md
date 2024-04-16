@@ -40,6 +40,10 @@ HNSW，NSG 和 Vamana 本质上都是图算法，都可以抽象为两个操作 
 
 DiskANN 通过 BeamSearch(设置 beamwidth 一次读多个数据块) 和缓存最常访问的节点（eg. by caching all vertices that are C = 3 or 4 hops from the starting point s）来加速查询。 另外，DiskANN 将邻居节点的向量保存在磁盘索引文件中，来提高搜索的精度（Implicit Re-Ranking Using Full-Precision Vectors）。
 
+### Code
+
+- [microsoft/DiskANN](https://github.com/microsoft/DiskANN), Graph-structured Indices for Scalable, Fast, Fresh and Filtered Approximate Nearest Neighbor Search
+
 ### Further readings
 
 - [FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search](/assets/pdfs/FreshDiskANN_2021.pdf), 2021
