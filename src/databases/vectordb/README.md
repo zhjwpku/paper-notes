@@ -40,6 +40,9 @@
 - [SPLADE for Sparse Vector Search Explain](https://www.pinecone.io/learn/splade/)
 - [Sparse embedding or BM25?](https://medium.com/@infiniflowai/sparse-embedding-or-bm25-84c942b3eda7)
 - [Unlock Advanced Recommendation Engines with Milvus' New Range Search](https://zilliz.com/blog/unlock-advanced-recommendation-engines-with-milvus-new-range-search)
+- [Billion-scale vector search with Vespa - part one](https://blog.vespa.ai/billion-scale-knn/)
+- [Billion-scale vector search with Vespa - part two](https://blog.vespa.ai/billion-scale-knn-part-two/)
+- [Billion-scale vector search using hybrid HNSW-IF](https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/)
 
 [hnsw]: hnsw.md
 [pq]: pq.md
