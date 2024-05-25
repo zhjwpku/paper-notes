@@ -43,6 +43,7 @@
 - [Billion-scale vector search with Vespa - part one](https://blog.vespa.ai/billion-scale-knn/)
 - [Billion-scale vector search with Vespa - part two](https://blog.vespa.ai/billion-scale-knn-part-two/)
 - [Billion-scale vector search using hybrid HNSW-IF](https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/)
+- [Weaviate: An Architectural Deep Dive (Etienne Dilocker)](https://www.youtube.com/watch?v=4sLJapXEPd4&list=PLSE8ODhjZXjYVdJKka5g3xTKfPBITrxOu) with HNSW and PQ detailed
 
 [hnsw]: hnsw.md
 [pq]: pq.md
