@@ -23,6 +23,7 @@
     - [lakehouse](./databases/olap/lakehouse.md)
     - [delta lake](./databases/olap/delta-lake.md)
     - [vertica](./databases/olap/vertica.md)
+    - [duckdb](./databases/olap/duckdb.md)
   - [htap](./databases/htap/README.md)
     - [greenplum](./databases/htap/greenplum-htap.md)
   - [vector db](./databases/vectordb/README.md)

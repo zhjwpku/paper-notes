@@ -13,6 +13,7 @@
   - **[Lakehouse: A New Generation of Open Platforms that Unify DataWarehousing and Advanced Analytics][lakehouse]**
   - **[Delta Lake: HighPerformance ACID Table Storage over Cloud Object Stores][deltalake]**
   - **[The Vertica Analytic Database: C-Store 7 Years Later][vertica]**
+  - **[Data Management for Data Science Towards Embedded Analytics][duckdb]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
 - **[Vector DB](vectordb/index.html)**
@@ -55,3 +56,4 @@
 [ivf-hnsw]: vectordb/ivf-hnsw.md
 [wisckey]: kv/wisckey.md
 [diskann]: vectordb/diskann.md
+[duckdb]: olap/duckdb.md
