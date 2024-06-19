@@ -44,6 +44,7 @@
 - [Billion-scale vector search with Vespa - part two](https://blog.vespa.ai/billion-scale-knn-part-two/)
 - [Billion-scale vector search using hybrid HNSW-IF](https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/)
 - [Weaviate: An Architectural Deep Dive (Etienne Dilocker)](https://www.youtube.com/watch?v=4sLJapXEPd4&list=PLSE8ODhjZXjYVdJKka5g3xTKfPBITrxOu) with HNSW and PQ detailed
+- [Milvus: A Purpose-Built Vector Data Management System! (Li Liu)](https://www.youtube.com/watch?v=kIj-KKnC-PA&list=PLSE8ODhjZXjYVdJKka5g3xTKfPBITrxOu) Milvus 2.0 architecture explained
 
 [hnsw]: hnsw.md
 [pq]: pq.md
