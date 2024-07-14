@@ -202,6 +202,12 @@
 <p>在正常操作中，Aurora 持续与存储服务交互，保持状态以建立仲裁、推进持久性并登记提交的事务。写操作中，随着每批日志记录的写入仲裁确认，当前 VDL 不断推进。提交操作异步完成，处理提交请求的线程会将事务记录在等待提交的列表中，然后继续处理其它任务。读操作中，Aurora 保证缓存中的页面总是最新版本，通过从存储节点获取最新的页面版本，避免了传统数据库中页面被替换前需要写入磁盘的问题。副本操作中，最多可支持15个读副本，它们通过消费写入器生成的日志流保持同步。副本异步处理日志记录，并确保只应用 VDL 以下的日志记录，同时保证单个迷你事务内的日志记录原子性地应用到缓存中。</p>
 <h4 id="putting-it-all-together"><a class="header" href="#putting-it-all-together">PUTTING IT ALL TOGETHER</a></h4>
 <p><img src="/assets/images/aurora_architecture_bird_eye_view.png" alt="Aurora Architecture: A Bird's Eye View" /></p>
+<h3 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jJSh54J1s5o">MIT 6.824 Lecture 10: Cloud Replicated DB, Aurora</a></li>
+<li><a href="https://www.youtube.com/watch?v=pzZydB78Eyc">AWS re:Invent 2022 - Deep dive into Amazon Aurora and its innovations</a></li>
+<li><a href="https://www.youtube.com/watch?v=je6GCOZ22lI">AWS re:Invent 2023 - Deep dive into Amazon Aurora and its innovations</a></li>
+</ul>
 
                     </main>
 

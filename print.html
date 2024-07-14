@@ -632,6 +632,12 @@ system to an earlier point in time.</p>
 <p>在正常操作中，Aurora 持续与存储服务交互，保持状态以建立仲裁、推进持久性并登记提交的事务。写操作中，随着每批日志记录的写入仲裁确认，当前 VDL 不断推进。提交操作异步完成，处理提交请求的线程会将事务记录在等待提交的列表中，然后继续处理其它任务。读操作中，Aurora 保证缓存中的页面总是最新版本，通过从存储节点获取最新的页面版本，避免了传统数据库中页面被替换前需要写入磁盘的问题。副本操作中，最多可支持15个读副本，它们通过消费写入器生成的日志流保持同步。副本异步处理日志记录，并确保只应用 VDL 以下的日志记录，同时保证单个迷你事务内的日志记录原子性地应用到缓存中。</p>
 <h4 id="putting-it-all-together"><a class="header" href="#putting-it-all-together">PUTTING IT ALL TOGETHER</a></h4>
 <p><img src="databases/cloudnative//assets/images/aurora_architecture_bird_eye_view.png" alt="Aurora Architecture: A Bird's Eye View" /></p>
+<h3 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jJSh54J1s5o">MIT 6.824 Lecture 10: Cloud Replicated DB, Aurora</a></li>
+<li><a href="https://www.youtube.com/watch?v=pzZydB78Eyc">AWS re:Invent 2022 - Deep dive into Amazon Aurora and its innovations</a></li>
+<li><a href="https://www.youtube.com/watch?v=je6GCOZ22lI">AWS re:Invent 2023 - Deep dive into Amazon Aurora and its innovations</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="a-hrefdatabasesassetspdfscolumn-stores20vs20row-stores-20how20different20are20they20reallypdfcolumnstores-vs-rowstores-how-different-are-they-reallya"><a class="header" href="#a-hrefdatabasesassetspdfscolumn-stores20vs20row-stores-20how20different20are20they20reallypdfcolumnstores-vs-rowstores-how-different-are-they-reallya"><a href="databases/../assets/pdfs/Column-Stores%20vs.%20Row-Stores-%20How%20Different%20Are%20They%20Really.pdf">ColumnStores vs. RowStores: How Different Are They Really?</a></a></h3>
 <blockquote>
 <p>SIGMOD 2008 Daniel J. Abadi, etc.</p>
@@ -687,7 +693,7 @@ workloads?</li>
 <li><strong><a href="databases/kv//assets/pdfs/fast21-dong.pdf">Evolution of Development Priorities in Key-value Stores Serving Large-scale Applications: The RocksDB Experience</a>, 2021 <a href="databases/kv//assets/pdfs/rocksdb-evolution-2021.pdf">a slightly more detailed version</a></strong></li>
 <li><strong><a href="databases/kv/wisckey.html">WiscKey: Separating Keys from Values in SSD-Conscious Storage</a>, 2016</strong></li>
 </ul>
-<h3 id="further-readings"><a class="header" href="#further-readings">Further readings</a></h3>
+<h3 id="further-readings-1"><a class="header" href="#further-readings-1">Further readings</a></h3>
 <ul>
 <li><a href="databases/kv//assets/pdfs/pcp_pipelined_compaction_for_lsm_tree.pdf">Pipelined Compaction for the LSM-tree</a>, 2014</li>
 <li><a href="databases/kv//assets/pdfs/hashkv-atc18.pdf">HashKV: Enabling Efficient Updates in KV Storage via Hashing</a>, 2018</li>
@@ -818,7 +824,7 @@ can be over 50 (10 for each gap between L1 to L6).</p>
 files in the LSM-tree and a significant portion of the LSM-tree can be easily <strong>cached in memory</strong>.</p>
 </blockquote>
 <p>当然 k/v 分离也带来了一些挑战，最直观的挑战是当写入随机的键值对，然后进行 Range Query，导致查询到的 value 分布在 log file 的不同位置，文章提出用并发读来提高带宽。作者对其它挑战（ Garbage Collection &amp; ）也都提出了相应的解决方案，感兴趣的读者请阅读论文。</p>
-<h4 id="further-readings-1"><a class="header" href="#further-readings-1">Further readings</a></h4>
+<h4 id="further-readings-2"><a class="header" href="#further-readings-2">Further readings</a></h4>
 <ul>
 <li><a href="databases/kv//assets/pdfs/hashkv-atc18.pdf">HashKV: Enabling Efficient Updates in KV Storage via Hashing</a>, 2018. Section 2.2 对 WiscKey 的介绍值得一读</li>
 </ul>
@@ -1163,7 +1169,7 @@ performance and compression penalty it exacts.</p>
 </ul>
 <h3 id="code"><a class="header" href="#code">Code</a></h3>
 <p><a href="https://github.com/duckdb/duckdb">DuckDB is an in-process SQL OLAP Database Management System</a></p>
-<h3 id="further-readings-2"><a class="header" href="#further-readings-2">Further readings</a></h3>
+<h3 id="further-readings-3"><a class="header" href="#further-readings-3">Further readings</a></h3>
 <ul>
 <li><a href="https://duckdb.org/pdf/SIGMOD2019-demo-duckdb.pdf">DuckDB: an Embeddable Analytical Database</a></li>
 </ul>
@@ -1362,7 +1368,7 @@ of this set X to be <strong>|X∩G| / k</strong>.</p>
 <ul>
 <li><a href="https://github.com/microsoft/DiskANN">microsoft/DiskANN</a>, Graph-structured Indices for Scalable, Fast, Fresh and Filtered Approximate Nearest Neighbor Search</li>
 </ul>
-<h3 id="further-readings-3"><a class="header" href="#further-readings-3">Further readings</a></h3>
+<h3 id="further-readings-4"><a class="header" href="#further-readings-4">Further readings</a></h3>
 <ul>
 <li><a href="databases/vectordb//assets/pdfs/FreshDiskANN_2021.pdf">FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search</a>, 2021</li>
 <li><a href="databases/vectordb//assets/pdfs/OOD-DiskANN-2022.pdf">OOD-DiskANN: Efficient and Scalable Graph ANNS for Out-of-Distribution Queries</a>, 2022</li>
@@ -1734,7 +1740,7 @@ and memory overheads, also sets a lower bound for the third overhead.</p>
 <li><strong><a href="datalayout/orc.html">Major Technical Advancements in Apache Hive</a></strong></li>
 <li><strong><a href="datalayout/table-placement-methods.html">Table Placement Methods</a></strong></li>
 </ul>
-<h4 id="further-readings-4"><a class="header" href="#further-readings-4">Further readings</a></h4>
+<h4 id="further-readings-5"><a class="header" href="#further-readings-5">Further readings</a></h4>
 <p>[1] <a href="http://dbmsmusings.blogspot.com/2017/10/apache-arrow-vs-parquet-and-orc-do-we.html">Apache Arrow vs. Parquet and ORC: Do we really need a third Apache project for columnar data representation?</a> by Daniel Abadi, 2017<br></p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="a-hrefdatalayoutassetspdfscstore-vldb05pdfc-store-a-column-oriented-dbmsa"><a class="header" href="#a-hrefdatalayoutassetspdfscstore-vldb05pdfc-store-a-column-oriented-dbmsa"><a href="datalayout/../assets/pdfs/cstore-vldb05.pdf">C-Store: A Column-oriented DBMS</a></a></h3>
 <blockquote>
@@ -2615,7 +2621,7 @@ accepted. If any of these bits is zero, the message is rejected.</p>
 <li><strong><a href="distributedsystem/consensus/raft.html">In Search of an Understandable Consensus Algorithm</a></strong></li>
 <li><strong><a href="distributedsystem/consensus/paxos-vs-raft.html">Paxos vs Raft: have we reached consensus on distributed consensus?</a></strong></li>
 </ul>
-<h4 id="further-readings-5"><a class="header" href="#further-readings-5">Further readings</a></h4>
+<h4 id="further-readings-6"><a class="header" href="#further-readings-6">Further readings</a></h4>
 <p>[1] <a href="distributedsystem/consensus/../../assets/pdfs/disk-paxos.pdf">Disk Paxos</a> by Eli Gafni &amp; Leslie Lamport, 2002<br>
 [2] <a href="distributedsystem/consensus/../../assets/pdfs/paxos-abcd.pdf">The ABCD’s of Paxos</a> by Butler W. Lampson, PODC 2001<br>
 [3] Paxos for System Builders: <a href="distributedsystem/consensus/../../assets/pdfs/paxos-for-system-builders-an-overview.pdf">An Overview</a> and <a href="distributedsystem/consensus/../../assets/pdfs/paxos_for_system_builders.pdf">The Complete Specification</a> by Yair Amir and Jonathan Kirsch, 2008<br>
@@ -3297,7 +3303,7 @@ where the server (the state machine) runs on a fault-tolerant, replicated system
 <p>由于相对较难理解，还没深入看 :()</p>
 <h4 id="detecting-behavioral-patterns"><a class="header" href="#detecting-behavioral-patterns">Detecting Behavioral Patterns</a></h4>
 <p>由于相对较难理解，还没深入看 :()</p>
-<h4 id="further-readings-6"><a class="header" href="#further-readings-6">Further readings</a></h4>
+<h4 id="further-readings-7"><a class="header" href="#further-readings-7">Further readings</a></h4>
 <p>[1] <a href="https://fileadmin.cs.lth.se/cs/Personal/Amr_Ergawy/dist-algos-papers/4.pdf">Timestamps in Message-Passing Systems That Preserve the Partial Ordering</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="a-hrefdistributedsystemassetspdfschandypdfdistributed-snapshots-determining-global-states-of-distributed-systemsa"><a class="header" href="#a-hrefdistributedsystemassetspdfschandypdfdistributed-snapshots-determining-global-states-of-distributed-systemsa"><a href="distributedsystem/../assets/pdfs/chandy.pdf">Distributed Snapshots: Determining Global States of Distributed Systems</a></a></h3>
 <blockquote>
@@ -3463,7 +3469,7 @@ read without the overhead of a full write.</p>
 <li><strong><a href="fs/gfs.html">The Google File System</a></strong></li>
 <li><strong><a href="fs/polarfs.html">PolarFS: An Ultralow Latency and Failure Resilient Distributed File System for Shared Storage Cloud Database</a></strong></li>
 </ul>
-<h3 id="further-readings-7"><a class="header" href="#further-readings-7">Further readings</a></h3>
+<h3 id="further-readings-8"><a class="header" href="#further-readings-8">Further readings</a></h3>
 <ul>
 <li><a href="https://www.usenix.org/system/files/conference/fast17/fast17-vangoor.pdf">To FUSE or Not to FUSE: Performance of User-Space File Systems</a>, FAST ’17</li>
 </ul>
