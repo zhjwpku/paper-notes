@@ -77,3 +77,8 @@ Aurora 通过将重做日志记录传输至存储层，简化了日志生成、�
 #### PUTTING IT ALL TOGETHER
 
 ![Aurora Architecture: A Bird's Eye View](/assets/images/aurora_architecture_bird_eye_view.png)
+
+
+### Further readings
+
+- [MIT 6.824 Lecture 10: Cloud Replicated DB, Aurora](https://www.youtube.com/watch?v=jJSh54J1s5o)
