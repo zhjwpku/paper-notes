@@ -82,3 +82,5 @@ Aurora 通过将重做日志记录传输至存储层，简化了日志生成、�
 ### Further readings
 
 - [MIT 6.824 Lecture 10: Cloud Replicated DB, Aurora](https://www.youtube.com/watch?v=jJSh54J1s5o)
+- [AWS re:Invent 2022 - Deep dive into Amazon Aurora and its innovations](https://www.youtube.com/watch?v=pzZydB78Eyc)
+- [AWS re:Invent 2023 - Deep dive into Amazon Aurora and its innovations](https://www.youtube.com/watch?v=je6GCOZ22lI)
