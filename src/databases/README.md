@@ -1,5 +1,7 @@
 ## databases
 
+- **[Cloud Native Database Systems](cloudnative/index.html)**
+  - **[Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases][aurora]**
 - **[Column-stores vs. row-stores: how different are they really?][column-stores-vs-row-stores]**
 - **[Main Memory Database Systems](mmdb/index.html)**
   - **[Main Memory Database Systems: An Overview][mmdb-overview]**
@@ -57,3 +59,4 @@
 [wisckey]: kv/wisckey.md
 [diskann]: vectordb/diskann.md
 [duckdb]: olap/duckdb.md
+[aurora]: cloudnative/aurora.md

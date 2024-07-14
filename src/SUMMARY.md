@@ -10,6 +10,8 @@
   - [flink](./bigdata/flink.md)
   - [flink state management](./bigdata/flink-state-management.md)
 - [databases](./databases/README.md)
+  - [cloudnative](./databases/cloudnative/README.md)
+    - [aurora](./databases/cloudnative/aurora.md)
   - [columnstores vs rowstores](./databases/column-stores-vs-row-stores.md)
   - [kv](./databases/kv/README.md)
     - [rocksdb cidr17](./databases/kv/optimizing-space-amplification-in-rocksdb.md)
