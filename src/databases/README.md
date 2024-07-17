@@ -2,6 +2,7 @@
 
 - **[Cloud Native Database Systems](cloudnative/index.html)**
   - **[Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases][aurora]**
+  - **[Taurus Database: How to be Fast, Available, and Frugal in the Cloud][taurus]**
 - **[Column-stores vs. row-stores: how different are they really?][column-stores-vs-row-stores]**
 - **[Main Memory Database Systems](mmdb/index.html)**
   - **[Main Memory Database Systems: An Overview][mmdb-overview]**
@@ -60,3 +61,4 @@
 [diskann]: vectordb/diskann.md
 [duckdb]: olap/duckdb.md
 [aurora]: cloudnative/aurora.md
+[taurus]: cloudnative/taurus.md

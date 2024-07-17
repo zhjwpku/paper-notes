@@ -12,6 +12,7 @@
 - [databases](./databases/README.md)
   - [cloudnative](./databases/cloudnative/README.md)
     - [aurora](./databases/cloudnative/aurora.md)
+    - [taurus](./databases/cloudnative/taurus.md)
   - [columnstores vs rowstores](./databases/column-stores-vs-row-stores.md)
   - [kv](./databases/kv/README.md)
     - [rocksdb cidr17](./databases/kv/optimizing-space-amplification-in-rocksdb.md)
