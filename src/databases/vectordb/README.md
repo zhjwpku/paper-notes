@@ -6,6 +6,10 @@
 
 > The goal of an ANN algorithm then is to **maximize recall** while retrieving the results as quickly as possible, which results in the **recall-vs-latency tradeoff**.
 
+[Awesome Vector Database](https://github.com/dangkhoasdc/awesome-vector-database) [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+A curated list of awesome works related to high dimensional structure/vector search &amp; database 
+
 ### Vector databases
 
 - [Milvus: A Purpose-Built Vector Data Management System](/assets/pdfs/SIGMOD21_Milvus.pdf), SIGMOD '21
