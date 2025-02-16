@@ -6,3 +6,7 @@
 - [Graph Pattern Matching in GQL and SQL/PGQ](https://arxiv.org/pdf/2112.06217) [SIGMOD '22](https://dl.acm.org/doi/10.1145/3514221.3526057)
 - [DuckPGQ: Bringing SQL/PGQ to DuckDB](https://dl.acm.org/doi/pdf/10.14778/3611540.3611614) VLDB, 2023
 - [DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS](https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf) CIDR 2023
+
+### Misc
+
+- [Knowledge Graphs (lecture)](https://www.youtube.com/watch?v=NZN2jVyRKVc&list=PLar5iR7mhb4dJHDSjmeo6W7HomHBSZf9t) - Talks and lectures by the Knowledge-Based Systems group at TU Dresden, covering research and foundations related to knowledge representation, AI, databases, and related topics.
