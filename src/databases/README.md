@@ -26,6 +26,7 @@
   - **[Product Quantization][pq]**
 - **[Graph Database](graphdb/index.html)**
   - **[Graph Pattern Matching in GQL and SQL/PGQ][gpml]**
+  - **[KÙZU Graph Database Management System][kuzu]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
 - **[Executor](executor/index.html)**
@@ -65,3 +66,4 @@
 [aurora]: cloudnative/aurora.md
 [taurus]: cloudnative/taurus.md
 [gpml]: https://arxiv.org/pdf/2112.06217
+[kuzu]: graphdb/kuzu.md

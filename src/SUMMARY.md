@@ -35,6 +35,7 @@
     - [diskann](./databases/vectordb/diskann.md)
     - [product quantization](./databases/vectordb/pq.md)
   - [graph db](./databases/graphdb/README.md)
+    - [kuzu](./databases/graphdb/kuzu.md)
   - [citus](./databases/citus.md)
   - [optimizer](./databases/optimizer/README.md)
   - [executor](./databases/executor/README.md)
