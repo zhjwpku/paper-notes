@@ -8,6 +8,10 @@
 - [DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS](https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf) CIDR 2023
 - [KÙZU Graph Database Management System][kuzu] CIDR 2023
 
+### Benchmarks
+
+- [The LDBC Social Network Benchmark](https://arxiv.org/abs/2001.02299)
+
 ### Misc
 
 - [Knowledge Graphs (lecture)](https://www.youtube.com/watch?v=NZN2jVyRKVc&list=PLar5iR7mhb4dJHDSjmeo6W7HomHBSZf9t) - Talks and lectures by the Knowledge-Based Systems group at TU Dresden, covering research and foundations related to knowledge representation, AI, databases, and related topics.
