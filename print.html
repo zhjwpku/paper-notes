@@ -1472,6 +1472,10 @@ A key concept of the system is the graph (or edge or relationship). The graph re
 <li><a href="https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf">DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS</a> CIDR 2023</li>
 <li><a href="databases/graphdb/kuzu.html">KÙZU Graph Database Management System</a> CIDR 2023</li>
 </ul>
+<h3 id="benchmarks-1"><a class="header" href="#benchmarks-1">Benchmarks</a></h3>
+<ul>
+<li><a href="https://arxiv.org/abs/2001.02299">The LDBC Social Network Benchmark</a></li>
+</ul>
 <h3 id="misc-2"><a class="header" href="#misc-2">Misc</a></h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=NZN2jVyRKVc&amp;list=PLar5iR7mhb4dJHDSjmeo6W7HomHBSZf9t">Knowledge Graphs (lecture)</a> - Talks and lectures by the Knowledge-Based Systems group at TU Dresden, covering research and foundations related to knowledge representation, AI, databases, and related topics.</li>
@@ -1607,6 +1611,13 @@ SELECT create_reference_table('dimensions');
 <p>对于只涉及单个 worker 的事务，Citus 将事务的处理指派给 worker 节点。对于涉及多个 worker 的事务，Citus 使用两阶段提交(2PC)来确保原子性。Citus 基于 PostgreSQL 提供的 PREPARE TRANSACTION/COMMIT PREPARED/ROLLBACK PREPARED 来实现 2PC。</p>
 <p>Citus 还实现了分布式死锁检测机制。</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="optimizer"><a class="header" href="#optimizer">Optimizer</a></h2>
+<ul>
+<li>Michael Jungmair, et al., PVLDB 2022 <a href="https://www.vldb.org/pvldb/vol15/p2389-jungmair.pdf">Designing an Open Framework for Query Optimization and Compilation</a>
+<ul>
+<li>propose to extend the scope of query compilers to also perform query optimization as a sequence of compiler passes</li>
+</ul>
+</li>
+</ul>
 <h4 id="optional-readings-1"><a class="header" href="#optional-readings-1">Optional readings</a></h4>
 <ul>
 <li>Michael S. Kester, et al., SIGMOD '17 <a href="databases/optimizer//assets/pdfs/Access_Path_Selection_in_Main-Memory_Optimized_Data_Systems.pdf">Access Path Selection in Main-Memory Optimized Data Systems: Should I Scan or Should I Probe?</a></li>
