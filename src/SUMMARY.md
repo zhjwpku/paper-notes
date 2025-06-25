@@ -9,6 +9,7 @@
   - [dataflow model](./bigdata/dataflow-model.md)
   - [flink](./bigdata/flink.md)
   - [flink state management](./bigdata/flink-state-management.md)
+- [compiler](./compiler/README.md)
 - [databases](./databases/README.md)
   - [cloudnative](./databases/cloudnative/README.md)
     - [aurora](./databases/cloudnative/aurora.md)
