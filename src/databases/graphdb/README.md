@@ -11,6 +11,7 @@
 ### Benchmarks
 
 - [The LDBC Social Network Benchmark](https://arxiv.org/abs/2001.02299)
+- [The LDBC Financial Benchmark](https://arxiv.org/abs/2306.15975)
 
 ### Misc
 
