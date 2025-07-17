@@ -7,6 +7,7 @@
 - [DuckPGQ: Bringing SQL/PGQ to DuckDB](https://dl.acm.org/doi/pdf/10.14778/3611540.3611614) VLDB, 2023
 - [DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS](https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf) CIDR 2023
 - [KÙZU Graph Database Management System][kuzu] CIDR 2023
+- [A Researcher's Digest of GQL](https://doi.org/10.4230/LIPIcs.ICDT.2023.1) ICDT 2023
 
 ### Benchmarks
 
