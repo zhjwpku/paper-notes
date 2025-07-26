@@ -2,6 +2,7 @@
 
 [Paper Notes](./README.md)
 - [benchmarks](./benchmarks/README.md)
+  - [tpch-chokepoints](./benchmarks/tpch-chokepoints.md)
   - [ssb](./benchmarks/ssb.md)
 - [bigdata](./bigdata/README.md)
   - [mapreduce](./bigdata/mapreduce.md)
