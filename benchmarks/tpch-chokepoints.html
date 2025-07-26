@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>tpch-chokepoints - 论文阅读笔记</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Paper Notes</a></li><li class="chapter-item expanded "><a href="../benchmarks/index.html"><strong aria-hidden="true">1.</strong> benchmarks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../benchmarks/tpch-chokepoints.html" class="active"><strong aria-hidden="true">1.1.</strong> tpch-chokepoints</a></li><li class="chapter-item expanded "><a href="../benchmarks/ssb.html"><strong aria-hidden="true">1.2.</strong> ssb</a></li></ol></li><li class="chapter-item expanded "><a href="../bigdata/index.html"><strong aria-hidden="true">2.</strong> bigdata</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bigdata/mapreduce.html"><strong aria-hidden="true">2.1.</strong> mapreduce</a></li><li class="chapter-item expanded "><a href="../bigdata/nephele.html"><strong aria-hidden="true">2.2.</strong> nephele</a></li><li class="chapter-item expanded "><a href="../bigdata/dataflow-model.html"><strong aria-hidden="true">2.3.</strong> dataflow model</a></li><li class="chapter-item expanded "><a href="../bigdata/flink.html"><strong aria-hidden="true">2.4.</strong> flink</a></li><li class="chapter-item expanded "><a href="../bigdata/flink-state-management.html"><strong aria-hidden="true">2.5.</strong> flink state management</a></li></ol></li><li class="chapter-item expanded "><a href="../compiler/index.html"><strong aria-hidden="true">3.</strong> compiler</a></li><li class="chapter-item expanded "><a href="../databases/index.html"><strong aria-hidden="true">4.</strong> databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/cloudnative/index.html"><strong aria-hidden="true">4.1.</strong> cloudnative</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/cloudnative/aurora.html"><strong aria-hidden="true">4.1.1.</strong> aurora</a></li><li class="chapter-item expanded "><a href="../databases/cloudnative/taurus.html"><strong aria-hidden="true">4.1.2.</strong> taurus</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/column-stores-vs-row-stores.html"><strong aria-hidden="true">4.2.</strong> columnstores vs rowstores</a></li><li class="chapter-item expanded "><a href="../databases/kv/index.html"><strong aria-hidden="true">4.3.</strong> kv</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/kv/optimizing-space-amplification-in-rocksdb.html"><strong aria-hidden="true">4.3.1.</strong> rocksdb cidr17</a></li><li class="chapter-item expanded "><a href="../databases/kv/wisckey.html"><strong aria-hidden="true">4.3.2.</strong> wisckey</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/mmdb/index.html"><strong aria-hidden="true">4.4.</strong> mmdb</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/mmdb/overview.html"><strong aria-hidden="true">4.4.1.</strong> mmdb overview</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/oltp/index.html"><strong aria-hidden="true">4.5.</strong> oltp</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/oltp/oltp-through-the-looking-glass.html"><strong aria-hidden="true">4.5.1.</strong> through the looking glass</a></li><li class="chapter-item expanded "><a href="../databases/oltp/staring-into-the-abyss.html"><strong aria-hidden="true">4.5.2.</strong> staring into the abyss</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/olap/index.html"><strong aria-hidden="true">4.6.</strong> olap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/olap/lakehouse.html"><strong aria-hidden="true">4.6.1.</strong> lakehouse</a></li><li class="chapter-item expanded "><a href="../databases/olap/delta-lake.html"><strong aria-hidden="true">4.6.2.</strong> delta lake</a></li><li class="chapter-item expanded "><a href="../databases/olap/vertica.html"><strong aria-hidden="true">4.6.3.</strong> vertica</a></li><li class="chapter-item expanded "><a href="../databases/olap/duckdb.html"><strong aria-hidden="true">4.6.4.</strong> duckdb</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/htap/index.html"><strong aria-hidden="true">4.7.</strong> htap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/htap/greenplum-htap.html"><strong aria-hidden="true">4.7.1.</strong> greenplum</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/vectordb/index.html"><strong aria-hidden="true">4.8.</strong> vector db</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/vectordb/hnsw.html"><strong aria-hidden="true">4.8.1.</strong> hnsw</a></li><li class="chapter-item expanded "><a href="../databases/vectordb/ivf-hnsw.html"><strong aria-hidden="true">4.8.2.</strong> ivf-hnsw</a></li><li class="chapter-item expanded "><a href="../databases/vectordb/diskann.html"><strong aria-hidden="true">4.8.3.</strong> diskann</a></li><li class="chapter-item expanded "><a href="../databases/vectordb/pq.html"><strong aria-hidden="true">4.8.4.</strong> product quantization</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/graphdb/index.html"><strong aria-hidden="true">4.9.</strong> graph db</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/graphdb/kuzu.html"><strong aria-hidden="true">4.9.1.</strong> kuzu</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/citus.html"><strong aria-hidden="true">4.10.</strong> citus</a></li><li class="chapter-item expanded "><a href="../databases/optimizer/index.html"><strong aria-hidden="true">4.11.</strong> optimizer</a></li><li class="chapter-item expanded "><a href="../databases/executor/index.html"><strong aria-hidden="true">4.12.</strong> executor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/executor/volcano.html"><strong aria-hidden="true">4.12.1.</strong> volcano</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/concurrencycontrol/index.html"><strong aria-hidden="true">4.13.</strong> concurrency control</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/concurrencycontrol/empirical-evaluation-of-mvcc.html"><strong aria-hidden="true">4.13.1.</strong> evaluation of in-memory mvcc</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/cdc/index.html"><strong aria-hidden="true">4.14.</strong> cdc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../databases/cdc/dblog.html"><strong aria-hidden="true">4.14.1.</strong> dblog</a></li></ol></li><li class="chapter-item expanded "><a href="../databases/rum.html"><strong aria-hidden="true">4.15.</strong> rum conjecture</a></li></ol></li><li class="chapter-item expanded "><a href="../datalayout/index.html"><strong aria-hidden="true">5.</strong> datalayout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datalayout/c-store.html"><strong aria-hidden="true">5.1.</strong> cstore</a></li><li class="chapter-item expanded "><a href="../datalayout/c-store-compression.html"><strong aria-hidden="true">5.2.</strong> cstore compression</a></li><li class="chapter-item expanded "><a href="../datalayout/dremel.html"><strong aria-hidden="true">5.3.</strong> dremel</a></li><li class="chapter-item expanded "><a href="../datalayout/rcfile.html"><strong aria-hidden="true">5.4.</strong> rcfile</a></li><li class="chapter-item expanded "><a href="../datalayout/orc.html"><strong aria-hidden="true">5.5.</strong> orc</a></li><li class="chapter-item expanded "><a href="../datalayout/table-placement-methods.html"><strong aria-hidden="true">5.6.</strong> table placement methods</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/index.html"><strong aria-hidden="true">6.</strong> data structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/btreefamily/index.html"><strong aria-hidden="true">6.1.</strong> btree family</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/btreefamily/bw-tree.html"><strong aria-hidden="true">6.1.1.</strong> bw-tree</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/hash/index.html"><strong aria-hidden="true">6.2.</strong> hash table</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/hash/linear-hashing.html"><strong aria-hidden="true">6.2.1.</strong> linear hashing</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/triefamily/index.html"><strong aria-hidden="true">6.3.</strong> trie family</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/triefamily/art.html"><strong aria-hidden="true">6.3.1.</strong> art</a></li><li class="chapter-item expanded "><a href="../datastructure/triefamily/hot.html"><strong aria-hidden="true">6.3.2.</strong> hot</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/bitmap/index.html"><strong aria-hidden="true">6.4.</strong> bitmaps</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructure/bitmap/roaring.html"><strong aria-hidden="true">6.4.1.</strong> roaring bitmaps</a></li></ol></li><li class="chapter-item expanded "><a href="../datastructure/skiplist.html"><strong aria-hidden="true">6.5.</strong> skip list</a></li><li class="chapter-item expanded "><a href="../datastructure/bloom-filter.html"><strong aria-hidden="true">6.6.</strong> bloom filter</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/index.html"><strong aria-hidden="true">7.</strong> distributed system</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/index.html"><strong aria-hidden="true">7.1.</strong> consensus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/consensus/flp.html"><strong aria-hidden="true">7.1.1.</strong> flp</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-simple.html"><strong aria-hidden="true">7.1.2.</strong> paxos made simple</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-made-live.html"><strong aria-hidden="true">7.1.3.</strong> paxos made live</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/vr.html"><strong aria-hidden="true">7.1.4.</strong> viewstamped replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/zab.html"><strong aria-hidden="true">7.1.5.</strong> zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-vr-vs-zab.html"><strong aria-hidden="true">7.1.6.</strong> paxos vs. vr vs. zab</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/raft.html"><strong aria-hidden="true">7.1.7.</strong> raft</a></li><li class="chapter-item expanded "><a href="../distributedsystem/consensus/paxos-vs-raft.html"><strong aria-hidden="true">7.1.8.</strong> paxos vs raft</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/index.html"><strong aria-hidden="true">7.2.</strong> scheduler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distributedsystem/scheduler/borg.html"><strong aria-hidden="true">7.2.1.</strong> borg</a></li></ol></li><li class="chapter-item expanded "><a href="../distributedsystem/primary-backup.html"><strong aria-hidden="true">7.3.</strong> primary backup</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chain-replication.html"><strong aria-hidden="true">7.4.</strong> chain replication</a></li><li class="chapter-item expanded "><a href="../distributedsystem/bolosky.html"><strong aria-hidden="true">7.5.</strong> bolosky</a></li><li class="chapter-item expanded "><a href="../distributedsystem/holygrail.html"><strong aria-hidden="true">7.6.</strong> holy grail</a></li><li class="chapter-item expanded "><a href="../distributedsystem/chandy.html"><strong aria-hidden="true">7.7.</strong> chandy lamport</a></li><li class="chapter-item expanded "><a href="../distributedsystem/abs.html"><strong aria-hidden="true">7.8.</strong> asynchronous barrier snapshotting</a></li><li class="chapter-item expanded "><a href="../distributedsystem/zookeeper.html"><strong aria-hidden="true">7.9.</strong> zookeeper</a></li></ol></li><li class="chapter-item expanded "><a href="../fs/index.html"><strong aria-hidden="true">8.</strong> filesystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../fs/gfs.html"><strong aria-hidden="true">8.1.</strong> gfs</a></li><li class="chapter-item expanded "><a href="../fs/polarfs.html"><strong aria-hidden="true">8.2.</strong> polarfs</a></li></ol></li><li class="chapter-item expanded "><a href="../llm/index.html"><strong aria-hidden="true">9.</strong> llm</a></li><li class="chapter-item expanded "><a href="../storage/index.html"><strong aria-hidden="true">10.</strong> storage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/index.html"><strong aria-hidden="true">10.1.</strong> kv store</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/kv/dynamo.html"><strong aria-hidden="true">10.1.1.</strong> dynamo</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/kudu.html"><strong aria-hidden="true">10.2.</strong> kudu</a></li><li class="chapter-item expanded "><a href="../storage/bluestore.html"><strong aria-hidden="true">10.3.</strong> bluestore</a></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">论文阅读笔记</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                                        <a href="https://github.com/zhjwpku/paper-notes/edit/master/src/benchmarks/tpch-chokepoints.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="a-hrefhttpshomepagescwinl7ebonczsnb-challengechokepoints-tpctcpdftpc-h-analyzed-hidden-messages-and-lessons-learned-from-an-influential-benchmarka"><a class="header" href="#a-hrefhttpshomepagescwinl7ebonczsnb-challengechokepoints-tpctcpdftpc-h-analyzed-hidden-messages-and-lessons-learned-from-an-influential-benchmarka"><a href="https://homepages.cwi.nl/%7Eboncz/snb-challenge/chokepoints-tpctc.pdf">TPC-H Analyzed: Hidden Messages and Lessons Learned from an Influential Benchmark</a></a></h3>
+<p>TPC-H 是由 TPC（事务处理性能委员会）制定的一个 决策支持系统（DSS）基准测试，用于评估数据库系统在处理复杂查询、数据分析任务时的性能表现。其 Schema 由八张表组成，如下:</p>
+<p><img src="../assets/images/tpch_schema.png" alt="TPC-H Schema" /></p>
+<p>这篇论文仍深入分析了 TPC‑H 的 &quot;瓶颈点&quot;（choke points），并从设计层面总结其对未来数据库基准设计的重要启示。</p>
+<p>作者识别出 28 个关键瓶颈点，分为六类（CP1–6）：</p>
+<ul>
+<li>聚合性能（Aggregation）</li>
+<li>连接性能（Join）</li>
+<li>数据访问局部性（Locality）</li>
+<li>表达式计算（Expression Calculation）</li>
+<li>关联子查询（Correlated Subqueries）</li>
+<li>并行执行（Parallel Execution）</li>
+</ul>
+<p>在评估数据库系统时，关注这些瓶颈能帮助准确诊断性能优势与劣势。</p>
+<p><img src="../assets/images/tpch-chokepoints.png" alt="TPC-H Choke Points" /></p>
+<h4 id="references"><a class="header" href="#references">References:</a></h4>
+<p>[1] <a href="https://www.tpc.org/tpc_documents_current_versions/pdf/tpc-h_v3.0.1.pdf">TPC BENCHMARK H Standard Specifcation</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../benchmarks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../benchmarks/ssb.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../benchmarks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../benchmarks/ssb.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
