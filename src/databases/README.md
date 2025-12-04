@@ -30,6 +30,7 @@
   - **[KÙZU Graph Database Management System][kuzu]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Optimizer](optimizer/index.html)**
+  - **[An Overview of Query Optimization in Relational Systems][overview]**
 - **[Executor](executor/index.html)**
   - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
 - **[Concurrency Control](concurrencycontrol/index.html)**
@@ -69,3 +70,4 @@
 [gpml]: https://arxiv.org/pdf/2112.06217
 [kuzu]: graphdb/kuzu.md
 [system-r]: oltp/system_r.md
+[overview]: optimizer/overview.md

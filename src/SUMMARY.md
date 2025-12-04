@@ -41,6 +41,7 @@
     - [kuzu](./databases/graphdb/kuzu.md)
   - [citus](./databases/citus.md)
   - [optimizer](./databases/optimizer/README.md)
+    - [overview](./databases/optimizer/overview.md)
   - [executor](./databases/executor/README.md)
     - [volcano](./databases/executor/volcano.md)
   - [concurrency control](./databases/concurrencycontrol/README.md)
