@@ -24,6 +24,7 @@
   - [oltp](./databases/oltp/README.md)
     - [through the looking glass](./databases/oltp/oltp-through-the-looking-glass.md)
     - [staring into the abyss](./databases/oltp/staring-into-the-abyss.md)
+    - [system r](./databases/oltp/system_r.md)
   - [olap](./databases/olap/README.md)
     - [lakehouse](./databases/olap/lakehouse.md)
     - [delta lake](./databases/olap/delta-lake.md)

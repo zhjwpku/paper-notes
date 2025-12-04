@@ -12,6 +12,7 @@
 - **[OLTP](oltp/index.html)**
   - **[OLTP Through the Looking Glass, and What We Found There][lookingglass]**
   - **[Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores][staring-abyss]**
+  - **[A History and Evaluation of System R][system-r]**
 - **[OLAP](olap/index.html)**
   - **[Lakehouse: A New Generation of Open Platforms that Unify DataWarehousing and Advanced Analytics][lakehouse]**
   - **[Delta Lake: HighPerformance ACID Table Storage over Cloud Object Stores][deltalake]**
@@ -67,3 +68,4 @@
 [taurus]: cloudnative/taurus.md
 [gpml]: https://arxiv.org/pdf/2112.06217
 [kuzu]: graphdb/kuzu.md
+[system-r]: oltp/system_r.md
