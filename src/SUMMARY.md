@@ -42,6 +42,7 @@
   - [citus](./databases/citus.md)
   - [optimizer](./databases/optimizer/README.md)
     - [overview](./databases/optimizer/overview.md)
+    - [system r access path selection](./databases/optimizer/system_r.md)
   - [executor](./databases/executor/README.md)
     - [volcano](./databases/executor/volcano.md)
   - [concurrency control](./databases/concurrencycontrol/README.md)
