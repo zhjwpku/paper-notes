@@ -32,6 +32,7 @@
 - **[Optimizer](optimizer/index.html)**
   - **[An Overview of Query Optimization in Relational Systems][overview]**
   - **[Access path selection in a relational database management system][system_r]**
+  - **[The Volcano Optimizer Generator: Extensibility and Efficient Search][opt-volcano]**
 - **[Executor](executor/index.html)**
   - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
 - **[Concurrency Control](concurrencycontrol/index.html)**
@@ -73,3 +74,4 @@
 [system-r]: oltp/system_r.md
 [overview]: optimizer/overview.md
 [system_r]: optimizer/system_r.md
+[opt-volcano]: optimizer/volcano.md
