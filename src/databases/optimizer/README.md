@@ -8,6 +8,7 @@
 
 #### Optional readings
 
+- Bailu Ding, et al. Foundations and Trends® in Databases, 2024, Vol 14 [Extensible Query Optimizers in Practice](https://www.microsoft.com/en-us/research/publication/extensible-query-optimizers-in-practice/)
 - Michael S. Kester, et al., SIGMOD '17 [Access Path Selection in Main-Memory Optimized Data Systems: Should I Scan or Should I Probe?](/assets/pdfs/Access_Path_Selection_in_Main-Memory_Optimized_Data_Systems.pdf)
 
 [overview]: overview.md
