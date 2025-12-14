@@ -1,14 +1,14 @@
 ## databases
 
-- **[Cloud Native Database Systems](cloudnative/index.html)**
-  - **[Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases][aurora]**
-  - **[Taurus Database: How to be Fast, Available, and Frugal in the Cloud][taurus]**
-- **[Column-stores vs. row-stores: how different are they really?][column-stores-vs-row-stores]**
-- **[Main Memory Database Systems](mmdb/index.html)**
-  - **[Main Memory Database Systems: An Overview][mmdb-overview]**
-- **[KV databases](kv/index.html)**
-  - **[Optimizing Space Amplification in RocksDB][rocksdb-cidr17]**
-  - **[WiscKey: Separating Keys from Values in SSD-Conscious Storage][wisckey]**
+- **[Optimizer](optimizer/index.html)**
+  - **[An Overview of Query Optimization in Relational Systems][overview]**
+  - **[Access path selection in a relational database management system][system_r]**
+  - **[The Volcano Optimizer Generator: Extensibility and Efficient Search][opt-volcano]**
+  - **[The Cascades Framework for Query Optimization][cascades]**
+- **[Executor](executor/index.html)**
+  - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
+- **[Concurrency Control](concurrencycontrol/index.html)**
+  - **[An Empirical Evaluation of In-Memory Multi-Version Concurrency Control][empirical-evaluation-of-mvcc]**
 - **[OLTP](oltp/index.html)**
   - **[OLTP Through the Looking Glass, and What We Found There][lookingglass]**
   - **[Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores][staring-abyss]**
@@ -20,6 +20,15 @@
   - **[Data Management for Data Science Towards Embedded Analytics][duckdb]**
 - **[HTAP](htap/index.html)**
   - **[Greenplum: A Hybrid Database for Transactional and Analytical Workloads][greenplum]**
+- **[Cloud Native Database Systems](cloudnative/index.html)**
+  - **[Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases][aurora]**
+  - **[Taurus Database: How to be Fast, Available, and Frugal in the Cloud][taurus]**
+- **[Column-stores vs. row-stores: how different are they really?][column-stores-vs-row-stores]**
+- **[Main Memory Database Systems](mmdb/index.html)**
+  - **[Main Memory Database Systems: An Overview][mmdb-overview]**
+- **[KV databases](kv/index.html)**
+  - **[Optimizing Space Amplification in RocksDB][rocksdb-cidr17]**
+  - **[WiscKey: Separating Keys from Values in SSD-Conscious Storage][wisckey]**
 - **[Vector DB](vectordb/index.html)**
   - **[Hierarchical NSW][hnsw]**
   - **[IVF-HNSW][ivf-hnsw]**
@@ -29,15 +38,6 @@
   - **[Graph Pattern Matching in GQL and SQL/PGQ][gpml]**
   - **[KÙZU Graph Database Management System][kuzu]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
-- **[Optimizer](optimizer/index.html)**
-  - **[An Overview of Query Optimization in Relational Systems][overview]**
-  - **[Access path selection in a relational database management system][system_r]**
-  - **[The Volcano Optimizer Generator: Extensibility and Efficient Search][opt-volcano]**
-  - **[The Cascades Framework for Query Optimization][cascades]**
-- **[Executor](executor/index.html)**
-  - **[Volcano — An Extensible and Parallel Query Evaluation System][volcano]**
-- **[Concurrency Control](concurrencycontrol/index.html)**
-  - **[An Empirical Evaluation of In-Memory Multi-Version Concurrency Control][empirical-evaluation-of-mvcc]**
 - **[Change Data Capture](cdc/index.html)**
   - **[DBLog: AWatermark Based Change-Data-Capture Framework][dblog]**
 - **[Designing Access Methods: The RUM Conjecture][rum]**
