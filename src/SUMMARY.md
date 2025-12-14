@@ -44,6 +44,7 @@
     - [overview](./databases/optimizer/overview.md)
     - [system r access path selection](./databases/optimizer/system_r.md)
     - [volcano](./databases/optimizer/volcano.md)
+    - [cascades](./databases/optimizer/cascades.md)
   - [executor](./databases/executor/README.md)
     - [volcano](./databases/executor/volcano.md)
   - [concurrency control](./databases/concurrencycontrol/README.md)

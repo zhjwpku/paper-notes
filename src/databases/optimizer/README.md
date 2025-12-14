@@ -5,6 +5,7 @@
 - **[An Overview of Query Optimization in Relational Systems][overview]**
 - **[Access path selection in a relational database management system][system_r]**
 - **[The Volcano Optimizer Generator: Extensibility and Efficient Search][volcano]**
+- **[The Cascades Framework for Query Optimization][cascades]**
 
 #### Optional readings
 
@@ -14,3 +15,4 @@
 [overview]: overview.md
 [system_r]: system_r.md
 [volcano]: volcano.md
+[cascades]: cascades.md
