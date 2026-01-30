@@ -36,6 +36,7 @@
   - **[Product Quantization][pq]**
 - **[Graph Database](graphdb/index.html)**
   - **[Graph Pattern Matching in GQL and SQL/PGQ][gpml]**
+  - **[An Algebra and Equivalences to Transform Graph Patterns in Neo4j][graph-algebra]**
   - **[Formalising openCypher Graph Queries in Relational Algebra][relational-graph-algebra]**
   - **[KÙZU Graph Database Management System][kuzu]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
@@ -79,4 +80,4 @@
 [opt-volcano]: optimizer/volcano.md
 [cascades]: optimizer/cascades.md
 [relational-graph-algebra]: graphdb/relational-graph-algebra.md
-
+[graph-algebra]: graphdb/graph-algebra.md

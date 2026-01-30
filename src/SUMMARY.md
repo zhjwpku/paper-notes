@@ -47,6 +47,7 @@
     - [diskann](./databases/vectordb/diskann.md)
     - [product quantization](./databases/vectordb/pq.md)
   - [graph db](./databases/graphdb/README.md)
+    - [graph algebra](./databases/graphdb/graph-algebra.md)
     - [relational graph algebra](./databases/graphdb/relational-graph-algebra.md)
     - [kuzu](./databases/graphdb/kuzu.md)
   - [citus](./databases/citus.md)
