@@ -10,6 +10,7 @@
 - [DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS](https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf) CIDR 2023
 - [KÙZU Graph Database Management System][kuzu] CIDR 2023
 - [A Researcher's Digest of GQL](https://doi.org/10.4230/LIPIcs.ICDT.2023.1) ICDT 2023
+- [GOpt - A Modular Graph-Native Query Optimization Framework](https://dl.acm.org/doi/10.1145/3722212.3724425) SIGMOD/PODS '25
 
 ### Benchmarks
 
