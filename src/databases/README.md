@@ -38,6 +38,7 @@
   - **[Graph Pattern Matching in GQL and SQL/PGQ][gpml]**
   - **[An Algebra and Equivalences to Transform Graph Patterns in Neo4j][graph-algebra]**
   - **[Formalising openCypher Graph Queries in Relational Algebra][relational-graph-algebra]**
+  - **[PG-Schema: Schemas for Property Graphs][pg-schema]**
   - **[KÙZU Graph Database Management System][kuzu]**
 - **[Citus: Distributed PostgreSQL for Data-Intensive Applications][citus]**
 - **[Change Data Capture](cdc/index.html)**
@@ -81,3 +82,4 @@
 [cascades]: optimizer/cascades.md
 [relational-graph-algebra]: graphdb/relational-graph-algebra.md
 [graph-algebra]: graphdb/graph-algebra.md
+[pg-schema]: graphdb/pg-schema.md

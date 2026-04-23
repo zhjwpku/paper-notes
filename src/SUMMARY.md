@@ -49,6 +49,7 @@
   - [graph db](./databases/graphdb/README.md)
     - [graph algebra](./databases/graphdb/graph-algebra.md)
     - [relational graph algebra](./databases/graphdb/relational-graph-algebra.md)
+    - [pg-schema](./databases/graphdb/pg-schema.md)
     - [kuzu](./databases/graphdb/kuzu.md)
   - [citus](./databases/citus.md)
   - [cdc](./databases/cdc/README.md)
