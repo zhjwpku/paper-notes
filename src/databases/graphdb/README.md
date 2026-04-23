@@ -6,6 +6,7 @@
 - [Graph Pattern Matching in GQL and SQL/PGQ](https://arxiv.org/pdf/2112.06217) [SIGMOD '22](https://dl.acm.org/doi/10.1145/3514221.3526057)
 - [An Algebra and Equivalences to Transform Graph Patterns in Neo4j](graph-algebra.md) EDBT/ICDT, 2016
 - [Formalising openCypher Graph Queries in Relational Algebra](relational-graph-algebra.md) ADBIS, 2017
+- [PG-Keys: Keys for Property Graphs](https://dl.acm.org/doi/epdf/10.1145/3448016.3457561) SIGMOD '21
 - [DuckPGQ: Bringing SQL/PGQ to DuckDB](https://dl.acm.org/doi/pdf/10.14778/3611540.3611614) VLDB, 2023
 - [DuckPGQ: Efficient Property Graph Queries in an analytical RDBMS](https://www.cidrdb.org/cidr2023/papers/p66-wolde.pdf) CIDR 2023
 - [KÙZU Graph Database Management System][kuzu] CIDR 2023
