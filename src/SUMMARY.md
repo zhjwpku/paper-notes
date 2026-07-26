@@ -10,6 +10,7 @@
   - [dataflow model](./bigdata/dataflow-model.md)
   - [flink](./bigdata/flink.md)
   - [flink state management](./bigdata/flink-state-management.md)
+  - [ray](./bigdata/ray.md)
 - [compiler](./compiler/README.md)
 - [databases](./databases/README.md)
   - [optimizer](./databases/optimizer/README.md)
