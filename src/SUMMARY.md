@@ -11,6 +11,7 @@
   - [flink](./bigdata/flink.md)
   - [flink state management](./bigdata/flink-state-management.md)
   - [ray](./bigdata/ray.md)
+  - [streaming batch (ray data)](./bigdata/streaming-batch.md)
 - [compiler](./compiler/README.md)
 - [databases](./databases/README.md)
   - [optimizer](./databases/optimizer/README.md)
